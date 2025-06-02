@@ -21,8 +21,12 @@ export default function Header() {
               Tech <ChevronDown size={14} className="ml-1" />
             </button>
             <div className="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md p-2 min-w-[150px]">
-              <Link href="/tech/web" className="block px-3 py-1 text-sm hover:bg-gray-100">Web</Link>
-              <Link href="/tech/mobile" className="block px-3 py-1 text-sm hover:bg-gray-100">Mobile</Link>
+              <Link href="/tech/web" className="block px-3 py-1 text-sm hover:bg-gray-100">
+                Web
+              </Link>
+              <Link href="/tech/mobile" className="block px-3 py-1 text-sm hover:bg-gray-100">
+                Mobile
+              </Link>
             </div>
           </div>
 
@@ -31,8 +35,12 @@ export default function Header() {
               Digital <ChevronDown size={14} className="ml-1" />
             </button>
             <div className="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md p-2 min-w-[150px]">
-              <Link href="/digital/marketing" className="block px-3 py-1 text-sm hover:bg-gray-100">Marketing</Link>
-              <Link href="/digital/strategy" className="block px-3 py-1 text-sm hover:bg-gray-100">Strategy</Link>
+              <Link href="/digital/marketing" className="block px-3 py-1 text-sm hover:bg-gray-100">
+                Marketing
+              </Link>
+              <Link href="/digital/strategy" className="block px-3 py-1 text-sm hover:bg-gray-100">
+                Strategy
+              </Link>
             </div>
           </div>
 
@@ -41,15 +49,25 @@ export default function Header() {
               Content <ChevronDown size={14} className="ml-1" />
             </button>
             <div className="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md p-2 min-w-[150px]">
-              <Link href="/content/writing" className="block px-3 py-1 text-sm hover:bg-gray-100">Writing</Link>
-              <Link href="/content/design" className="block px-3 py-1 text-sm hover:bg-gray-100">Design</Link>
+              <Link href="/content/writing" className="block px-3 py-1 text-sm hover:bg-gray-100">
+                Writing
+              </Link>
+              <Link href="/content/design" className="block px-3 py-1 text-sm hover:bg-gray-100">
+                Design
+              </Link>
             </div>
           </div>
 
           {/* Static links */}
-          <Link href="/about" className="text-sm font-medium hover:text-[#00647D] transition-colors">About Us</Link>
-          <Link href="/contact" className="text-sm font-medium hover:text-[#00647D] transition-colors">Contact Us</Link>
-          <Link href="/career" className="text-sm font-medium hover:text-[#00647D] transition-colors">Career</Link>
+          <Link href="/about" className="text-sm font-medium hover:text-[#00647D] transition-colors">
+            About Us
+          </Link>
+          <Link href="/contact" className="text-sm font-medium hover:text-[#00647D] transition-colors">
+            Contact Us
+          </Link>
+          <Link href="/career" className="text-sm font-medium hover:text-[#00647D] transition-colors">
+            Career
+          </Link>
         </nav>
 
         {/* Actions */}

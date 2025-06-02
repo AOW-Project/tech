@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -8,16 +8,32 @@ export default function Footer() {
 
         {/* Logo + Description */}
         <div>
-          <Image src="/images/footer/footer logo.png" alt="Logo" width={100} height={30} className="mb-3" />
+          <Image
+            src="/images/footer/footer logo.png"
+            alt="Logo"
+            width={160}
+            height={50}
+            className="mb-4"
+          />
           <p className="text-[14px] text-gray-300 mb-3 leading-relaxed">
             Our social media marketing team crafts custom campaigns aligned with your business objectives.
           </p>
-          <div className="flex space-x-2">
-            <Image src="/images/vector (9).png" alt="Twitter" width={14} height={14} />
-            <Image src="/images/linkdin.svg" alt="LinkedIn" width={14} height={14} />
-            <Image src="/images/insta.svg" alt="Instagram" width={14} height={14} />
-            <Image src="/images/facebook.svg" alt="Facebook" width={14} height={14} />
-            <Image src="/images/youtube.svg" alt="YouTube" width={14} height={14} />
+          <div className="flex space-x-2 mt-2">
+            {[
+              { src: "/images/vector (9).png", alt: "Twitter" },
+              { src: "/images/linkedin.png", alt: "LinkedIn" },
+              { src: "/images/insta.png", alt: "Instagram" },
+              { src: "/images/facebook.png", alt: "Facebook" },
+              { src: "/images/youtube.png", alt: "YouTube" },
+              { src: "/images/whatsapp.png", alt: "Whatsapp" },
+            ].map((icon, index) => (
+              <div
+                key={index}
+                className="w-6 h-6 border border-gray-400 rounded-sm flex items-center justify-center"
+              >
+                <Image src={icon.src} alt={icon.alt} width={12} height={12} />
+              </div>
+            ))}
           </div>
         </div>
 
@@ -111,6 +127,5 @@ export default function Footer() {
         © 2025 AOW Information of Worlds. All rights reserved.
       </div>
     </footer>
-  )
+  );
 }
-
