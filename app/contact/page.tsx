@@ -79,50 +79,48 @@ export default function ContactPage() {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-4 h-4 text-blue-600" />
-                      <span className="text-gray-900 text-sm font-bold">support@qwew.co.in</span>
+                      <span className="text-gray-900 text-sm font-bold">support@aow.co.in</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Social Media with longer connecting lines */}
+                {/* Social Media with arrow links and separator lines - Exact match to screenshot */}
                 <div className="pt-6">
                   <h4 className="font-bold text-gray-900 text-sm mb-6 uppercase">FOLLOW US ON SOCIAL MEDIA</h4>
-                  <div className="grid grid-cols-2 gap-y-4 gap-x-16">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                      <div className="w-24 h-px bg-blue-600"></div>
-                      <span className="text-gray-900 text-sm font-bold">TWITTER</span>
+                  <div className="grid grid-cols-2 gap-x-4">
+                    <div>
+                      <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                        <span className="text-gray-900 text-sm font-medium">TWITTER</span>
+                        <Image src="/images/arrow.svg" alt="Arrow" width={24} height={24} />
+                      </div>
+                      <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                        <span className="text-gray-900 text-sm font-medium">WHATSAPP</span>
+                        <Image src="/images/arrow.svg" alt="Arrow" width={24} height={24} />
+                      </div>
+                      <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                        <span className="text-gray-900 text-sm font-medium">YOUTUBE</span>
+                        <Image src="/images/arrow.svg" alt="Arrow" width={24} height={24} />
+                      </div>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                      <div className="w-24 h-px bg-blue-600"></div>
-                      <span className="text-gray-900 text-sm font-bold">INSTAGRAM</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                      <div className="w-24 h-px bg-blue-600"></div>
-                      <span className="text-gray-900 text-sm font-bold">WHATSAPP</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                      <div className="w-24 h-px bg-blue-600"></div>
-                      <span className="text-gray-900 text-sm font-bold">FACEBOOK</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                      <div className="w-24 h-px bg-blue-600"></div>
-                      <span className="text-gray-900 text-sm font-bold">YOUTUBE</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                      <div className="w-24 h-px bg-blue-600"></div>
-                      <span className="text-gray-900 text-sm font-bold">LINKEDIN</span>
+                    <div>
+                      <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                        <span className="text-gray-900 text-sm font-medium">INSTAGRAM</span>
+                        <Image src="/images/arrow.svg" alt="Arrow" width={24} height={24} />
+                      </div>
+                      <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                        <span className="text-gray-900 text-sm font-medium">FACEBOOK</span>
+                        <Image src="/images/arrow.svg" alt="Arrow" width={24} height={24} />
+                      </div>
+                      <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                        <span className="text-gray-900 text-sm font-medium">LINKEDIN</span>
+                        <Image src="/images/arrow.svg" alt="Arrow" width={24} height={24} />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Right Column - Tech Image - Increased height */}
+              {/* Right Column - Tech Image */}
               <div className="lg:w-1/2 flex justify-center lg:justify-end">
                 <div className="bg-gray-900 rounded-lg overflow-hidden">
                   <Image
@@ -140,7 +138,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Bottom Section - Properly aligned */}
+      {/* Bottom Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -160,7 +158,7 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Bottom Tech Image - Increased height */}
+                {/* Bottom Tech Image */}
                 <div className="flex justify-start">
                   <Image
                     src="/images/contact/contact 2.jpg"
