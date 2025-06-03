@@ -2,13 +2,15 @@
 import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
+import { Inter } from "next/font/google"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export default function CareerPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -52,53 +54,63 @@ export default function CareerPage() {
   const benefits = [
     {
       title: "FLEXIBLE HOURS",
-      icon: "⏱️",
+      icon: "/images/career/1.png",
       description: "Work on your terms. Enjoy a schedule that allows for a healthy work-life balance.",
-      list: ["Flexible start and end times", "Team-oriented team", "Subsidized support and tax coverage"],
+      list: ["Flexible 40-hour working week", "Open-minded team", "Accountant support and tax coverage"],
+      bgColor: "bg-[#EBF5FA]",
     },
     {
       title: "CAREER GROWTH",
-      icon: "📈",
+      icon: "/images/career/2.png",
       description:
         "We believe in your potential and provide opportunities for continuous learning and career advancement.",
       list: [
         "Personal development plans",
-        "Mentorship and coaching opportunities",
-        "Regular career reviews and discussions",
+        "Access to training and certifications",
+        "Regular career reviews and mentorship",
       ],
+      bgColor: "bg-white",
     },
     {
       title: "COMPETITIVE SALARY",
-      icon: "💰",
+      icon: "/images/career/3.png",
       description: "We offer attractive compensation to reward your skills and hard work.",
-      list: ["Above-market pay rates", "Annual salary reviews", "Competitive base salary with growth potential"],
+      list: ["Performance-based bonuses", "Annual salary reviews", "Competitive base salary with growth potential"],
+      bgColor: "bg-[#EBF5FA]",
     },
     {
-      title: "HEALTH & WELL BEING",
-      icon: "🏥",
+      title: "HEALTH & WELL-BEING",
+      icon: "/images/career/4.png",
       description: "Your health matters. We offer comprehensive health insurance and wellness programs.",
-      list: ["Full health insurance", "Gym membership and wellness programs", "Mental health support and counseling"],
+      list: [
+        "Full health insurance coverage",
+        "Gym membership and wellness programs",
+        "Mental health support and counseling",
+      ],
+      bgColor: "bg-white",
     },
     {
       title: "TEAM SPIRIT",
-      icon: "👥",
+      icon: "/images/career/5.png",
       description: "Be part of a collaborative and supportive team that values teamwork and creativity.",
-      list: ["Regular team building events", "Digital team-building activities", "Collaborative work culture"],
+      list: ["Open-minded team", "Regular team-building activities", "Collaborative work culture"],
+      bgColor: "bg-[#EBF5FA]",
     },
     {
       title: "REMOTE WORK",
-      icon: "🏠",
+      icon: "/images/career/6.png",
       description: "Work from anywhere. Enjoy the flexibility to work remotely and manage your time efficiently.",
-      list: ["Full remote capabilities", "All needed collaboration tools", "Quiet hours and flexible response options"],
+      list: ["Work from home options", "Full remote collaboration tools", "Global team and flexible timezone options"],
+      bgColor: "bg-white",
     },
   ]
 
   return (
-    <div className="font-sans">
+    <div className={inter.className}>
       {/* Header Section */}
       <section
         className="text-center py-20 bg-cover bg-center"
-        style={{ backgroundImage: 'url("/career-header-bg.png")' }}
+        style={{ backgroundImage: 'url("/images/bg image.png")' }}
       >
         <h2 className="text-2xl md:text-3xl text-gray-600 font-medium tracking-wide">CAREER</h2>
         <h1 className="text-6xl md:text-7xl font-bold text-black mt-3">
@@ -140,50 +152,58 @@ export default function CareerPage() {
 
         <div className="max-w-5xl mx-auto space-y-6">
           {filteredJobs.map((job, index) => (
-            <div key={index} className="bg-white border rounded-2xl shadow-md p-6 flex justify-between items-center">
-              <div>
-                <h4 className="text-lg font-semibold mb-3 uppercase">{job.title}</h4>
-                <div className="flex gap-2 flex-wrap">
-                  {job.tags.map((tag, i) => (
-                    <span key={i} className="bg-[#EAF6FB] text-[#0B6E99] text-xs font-medium px-3 py-1 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+            <div key={index} className="bg-white border rounded-2xl shadow-md p-6 flex items-center justify-between">
+              <div className="flex-shrink-0">
+                <h4 className="text-lg font-semibold uppercase text-left">{job.title}</h4>
               </div>
-              <button className="bg-[#0B6E99] hover:bg-[#095b7f] text-white px-6 py-2 rounded-full flex items-center gap-1 transition">
-                Apply <span>→</span>
-              </button>
+              <div className="flex gap-2 flex-wrap justify-center flex-1 mx-8">
+                {job.tags.map((tag, i) => (
+                  <span key={i} className="bg-[#EAF6FB] text-[#0B6E99] text-xs font-medium px-3 py-1 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="flex-shrink-0">
+                <button className="bg-[#0B6E99] hover:bg-[#095b7f] text-white px-6 py-2 rounded-full flex items-center gap-1 transition">
+                  Apply <Image src="/images/career/arrow.png" alt="Arrow" width={16} height={16} />
+                </button>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Benefits Section - Styled to match the screenshot */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+      {/* Benefits Section - Styled to match the screenshot exactly */}
+      <section className="py-16 bg-cover bg-center" style={{ backgroundImage: 'url("/images/bg image.png")' }}>
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold text-[#0B6E99] uppercase">WHAT WE OFFER YOU</p>
-            <h3 className="text-4xl font-bold mt-2">
+          <div className="mb-12">
+            <p className="text-sm font-semibold text-[#0B6E99] uppercase tracking-wide">WHAT WE OFFER YOU</p>
+            <h3 className="text-4xl font-bold mt-2 text-black">
               JOB <span className="text-[#0B6E99]">BENEFITS</span> YOU WILL APPRECIATE
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-blue-50 rounded-xl p-6 shadow-sm">
-                <div className="flex items-center mb-3">
-                  <div className="w-8 h-8 bg-[#0B6E99] rounded-md flex items-center justify-center text-white mr-3">
-                    {benefit.icon}
+              <div key={index} className={`${benefit.bgColor} rounded-lg p-6 border-2 border-[#0B6E99]`}>
+                <div className="flex items-start mb-4">
+                  <div className="w-8 h-8 mr-3 flex-shrink-0">
+                    <Image
+                      src={benefit.icon || "/placeholder.svg"}
+                      alt={benefit.title}
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <h4 className="font-bold text-lg">{benefit.title}</h4>
+                  <h4 className="font-bold text-base text-black leading-tight">{benefit.title}</h4>
                 </div>
-                <p className="text-gray-600 text-sm mb-4">{benefit.description}</p>
+                <p className="text-black text-sm mb-4 leading-relaxed">{benefit.description}</p>
                 <ul className="space-y-1">
                   {benefit.list.map((item, i) => (
-                    <li key={i} className="text-sm text-gray-700 flex items-start">
-                      <span className="text-[#0B6E99] mr-2">•</span>
-                      {item}
+                    <li key={i} className="text-sm text-black flex items-start leading-relaxed">
+                      <span className="text-black mr-2 flex-shrink-0">-</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -196,81 +216,72 @@ export default function CareerPage() {
       {/* Contact Section - Styled to match the screenshot */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="mb-12">
-            <p className="text-sm font-semibold text-[#0B6E99] uppercase text-center">OUR CONTACTS</p>
-            <h3 className="text-4xl font-bold mt-2 text-center">
-              GET IN TOUCH <span className="text-[#0B6E99]">WITH US!</span>
-            </h3>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left Column - Contact Info */}
             <div className="space-y-6">
+              <div className="mb-6">
+                <p className="text-sm font-semibold text-[#0B6E99] uppercase">OUR CONTACTS</p>
+                <h3 className="text-4xl font-bold mt-2">
+                  GET IN TOUCH <span className="text-[#0B6E99]">WITH US!</span>
+                </h3>
+              </div>
+
               <p className="text-gray-700">
-                If you have a question about Technology and Innovation, JUST INFORMATION TECHNOLOGY, it helps to
-                elegantly solve clients and look for like-minded people who align with our values.
+                If an individual is passionate about Technology and Innovation, AOW INFORMATION TECHNOLOGY's mission is
+                to diligently serve clients and look for like-minded people who align with our criteria.
               </p>
 
-              <div className="space-y-3">
+              <div className="pt-4">
+                <p className="font-medium mb-2">DON'T WANT TO WAIT? CALL US NOW!</p>
                 <div className="flex items-center">
-                  <div className="w-6 h-6 bg-[#0B6E99] rounded-full flex items-center justify-center text-white mr-3">
-                    <span className="text-xs">📞</span>
-                  </div>
-                  <span className="text-gray-700">+91 9873456789 INDIA</span>
-                </div>
-
-                <div className="flex items-center">
-                  <div className="w-6 h-6 bg-[#0B6E99] rounded-full flex items-center justify-center text-white mr-3">
-                    <span className="text-xs">✉️</span>
-                  </div>
-                  <span className="text-gray-700">careers@qwew.co.in</span>
+                  <Image src="/images/career/Phone Icon.png" alt="Phone" width={16} height={16} className="mr-2" />
+                  <span className="text-gray-700">+91 8073450249 INDIA</span>
                 </div>
               </div>
 
-              <div className="pt-6">
-                <p className="font-medium mb-4">THE INTERESTED CANDIDATES CAN DROP THEIR RESUME TO:</p>
-                <p className="text-[#0B6E99] font-medium">careers@qwew.co.in</p>
+              <div className="pt-4">
+                <p className="font-medium mb-2">THE INTERESTED CANDIDATES CAN DROP THEIR RESUME TO</p>
+                <div className="flex items-center">
+                  <Image src="/images/career/message.png" alt="Email" width={16} height={16} className="mr-2" />
+                  <span className="text-[#0B6E99] font-medium">support@aow.co.in</span>
+                </div>
               </div>
 
               {/* Social Media Links - Styled to match the screenshot */}
               <div className="pt-6">
-                <h4 className="font-bold text-gray-900 text-sm mb-6 uppercase">FOLLOW US ON SOCIAL MEDIA</h4>
-                <div className="grid grid-cols-2 gap-x-4">
-                  <div>
-                    <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                      <span className="text-gray-900 text-sm font-medium">TWITTER</span>
-                      <Image src="/images/arrow.png" alt="Arrow" width={24} height={24} />
-                    </div>
-                    <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                      <span className="text-gray-900 text-sm font-medium">WHATSAPP</span>
-                      <Image src="/images/arrow.png" alt="Arrow" width={24} height={24} />
-                    </div>
-                    <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                      <span className="text-gray-900 text-sm font-medium">YOUTUBE</span>
-                      <Image src="/images/arrow.png" alt="Arrow" width={24} height={24} />
-                    </div>
+                <p className="font-bold text-gray-900 mb-4">FOLLOW US ON SOCIAL MEDIA</p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                    <span className="text-gray-900 font-medium">TWITTER</span>
+                    <Image src="/images/arrow.svg" alt="Twitter" width={16} height={16} />
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                      <span className="text-gray-900 text-sm font-medium">INSTAGRAM</span>
-                      <Image src="/images/arrow.png" alt="Arrow" width={24} height={24} />
-                    </div>
-                    <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                      <span className="text-gray-900 text-sm font-medium">FACEBOOK</span>
-                      <Image src="/images/arrow.png" alt="Arrow" width={24} height={24} />
-                    </div>
-                    <div className="flex items-center justify-between py-3 border-b border-gray-200">
-                      <span className="text-gray-900 text-sm font-medium">LINKEDIN</span>
-                      <Image src="/images/arrow.png" alt="Arrow" width={24} height={24} />
-                    </div>
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                    <span className="text-gray-900 font-medium">INSTAGRAM</span>
+                    <Image src="/images/arrow.svg" alt="Instagram" width={16} height={16} />
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                    <span className="text-gray-900 font-medium">WHATSAPP</span>
+                    <Image src="/images/arrow.svg" alt="WhatsApp" width={16} height={16} />
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                    <span className="text-gray-900 font-medium">FACEBOOK</span>
+                    <Image src="/images/arrow.svg" alt="Facebook" width={16} height={16} />
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                    <span className="text-gray-900 font-medium">YOUTUBE</span>
+                    <Image src="/images/arrow.svg" alt="YouTube" width={16} height={16} />
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200">
+                    <span className="text-gray-900 font-medium">LINKEDIN</span>
+                    <Image src="/images/arrow.svg" alt="LinkedIn" width={16} height={16} />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Column - Contact Form */}
-            <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-6">
-              <h3 className="text-gray-800 text-base font-medium mb-6">
+            <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6">
+              <h3 className="text-[#0B6E99] font-medium mb-6 text-center">
                 WE ARE EXCITED TO LEARN MORE ABOUT YOU AND YOUR EXPERIENCE
               </h3>
 
@@ -280,7 +291,7 @@ export default function CareerPage() {
                   <input
                     name="name"
                     type="text"
-                    placeholder="Your name"
+                    placeholder="Name"
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
@@ -293,7 +304,7 @@ export default function CareerPage() {
                   <input
                     name="email"
                     type="email"
-                    placeholder="Your email"
+                    placeholder="ex.ample@gmail.com"
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-3 py-2 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
@@ -302,24 +313,25 @@ export default function CareerPage() {
                 </div>
 
                 <div>
-                  <label className="text-sm text-gray-600 mb-1 block">Attach your CV</label>
-                  <div className="flex items-center space-x-2 border border-gray-200 rounded-md p-2">
-                    <span className="text-sm text-gray-600">Drop a file</span>
-                    <label className="cursor-pointer">
-                      <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                        <span className="text-white text-xs">+</span>
-                      </div>
-                      <input type="file" className="hidden" />
-                    </label>
+                  <div className="flex items-center mb-2">
+                    <span className="text-sm text-gray-600 mr-2">Attach your CV</span>
+                    <div className="w-5 h-5 flex items-center justify-center text-white">
+                      <span className="text-white text-xs">
+                        {" "}
+                        <img src="/images/footer/load file.png" />
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-[#0B6E99] hover:bg-[#095b7f] text-white py-2 px-4 rounded-md text-sm font-medium transition-colors"
-                >
-                  Send
-                </button>
+                <div className="flex justify-end">
+                  <button
+                    type="submit"
+                    className="bg-[#0B6E99] hover:bg-[#095b7f] text-white py-2 px-4 rounded-xl text-sm font-medium transition-colors"
+                  >
+                    Next
+                  </button>
+                </div>
               </form>
             </div>
           </div>
