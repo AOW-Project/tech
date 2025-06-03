@@ -2,9 +2,13 @@
 import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
+<<<<<<< HEAD
 import { Inter } from "next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
+=======
+import Link from "next/link"
+>>>>>>> e2bc3d86d7c5bdaa755fab20e0ebeaef933e56ec
 
 export default function CareerPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
@@ -152,6 +156,7 @@ export default function CareerPage() {
 
         <div className="max-w-5xl mx-auto space-y-6">
           {filteredJobs.map((job, index) => (
+<<<<<<< HEAD
             <div key={index} className="bg-white border rounded-2xl shadow-md p-6 flex items-center justify-between">
               <div className="flex-shrink-0">
                 <h4 className="text-lg font-semibold uppercase text-left">{job.title}</h4>
@@ -168,6 +173,25 @@ export default function CareerPage() {
                   Apply <Image src="/images/career/arrow.png" alt="Arrow" width={16} height={16} />
                 </button>
               </div>
+=======
+            <div key={index} className="bg-white border rounded-2xl shadow-md p-6 flex justify-between items-center">
+              <div>
+                <h4 className="text-lg font-semibold mb-3 uppercase">{job.title}</h4>
+                <div className="flex gap-2 flex-wrap">
+                  {job.tags.map((tag, i) => (
+                    <span key={i} className="bg-[#EAF6FB] text-[#0B6E99] text-xs font-medium px-3 py-1 rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                </div>
+              <Link 
+                href={`/vacancy?position=${encodeURIComponent(job.title)}`}
+                className="bg-[#0B6E99] hover:bg-[#095b7f] text-white px-6 py-2 rounded-full flex items-center gap-1 transition"
+              >
+                Apply <span>→</span>
+              </Link>
+>>>>>>> e2bc3d86d7c5bdaa755fab20e0ebeaef933e56ec
             </div>
           ))}
         </div>
