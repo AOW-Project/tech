@@ -2,6 +2,7 @@
 import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function CareerPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
@@ -150,10 +151,13 @@ export default function CareerPage() {
                     </span>
                   ))}
                 </div>
-              </div>
-              <button className="bg-[#0B6E99] hover:bg-[#095b7f] text-white px-6 py-2 rounded-full flex items-center gap-1 transition">
+                </div>
+              <Link 
+                href={`/vacancy?position=${encodeURIComponent(job.title)}`}
+                className="bg-[#0B6E99] hover:bg-[#095b7f] text-white px-6 py-2 rounded-full flex items-center gap-1 transition"
+              >
                 Apply <span>→</span>
-              </button>
+              </Link>
             </div>
           ))}
         </div>

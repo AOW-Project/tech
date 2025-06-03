@@ -63,6 +63,20 @@ export default function MobileMenu() {
               Testimonials
             </Link>
             <Link
+              href="/career"
+              className="text-sm font-medium hover:text-[#00647D] transition-colors"
+              onClick={toggleMenu}
+            >
+              Career
+            </Link>
+            <Link
+              href="/vacancy"
+              className="text-sm font-medium hover:text-[#00647D] transition-colors"
+              onClick={toggleMenu}
+            >
+              Vacancies
+            </Link>
+            <Link
               href="/contact"
               className="text-sm font-medium hover:text-[#00647D] transition-colors"
               onClick={toggleMenu}
