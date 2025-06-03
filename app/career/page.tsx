@@ -2,13 +2,10 @@
 import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
-<<<<<<< HEAD
-import { Inter } from "next/font/google"
+import Link from "next/link"
+import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ["latin"] })
-=======
-import Link from "next/link"
->>>>>>> e2bc3d86d7c5bdaa755fab20e0ebeaef933e56ec
 
 export default function CareerPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
@@ -156,48 +153,29 @@ export default function CareerPage() {
 
         <div className="max-w-5xl mx-auto space-y-6">
           {filteredJobs.map((job, index) => (
-<<<<<<< HEAD
-            <div key={index} className="bg-white border rounded-2xl shadow-md p-6 flex items-center justify-between">
-              <div className="flex-shrink-0">
-                <h4 className="text-lg font-semibold uppercase text-left">{job.title}</h4>
-              </div>
-              <div className="flex gap-2 flex-wrap justify-center flex-1 mx-8">
-                {job.tags.map((tag, i) => (
-                  <span key={i} className="bg-[#EAF6FB] text-[#0B6E99] text-xs font-medium px-3 py-1 rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <div className="flex-shrink-0">
-                <button className="bg-[#0B6E99] hover:bg-[#095b7f] text-white px-6 py-2 rounded-full flex items-center gap-1 transition">
-                  Apply <Image src="/images/career/arrow.png" alt="Arrow" width={16} height={16} />
-                </button>
-              </div>
-=======
             <div key={index} className="bg-white border rounded-2xl shadow-md p-6 flex justify-between items-center">
               <div>
                 <h4 className="text-lg font-semibold mb-3 uppercase">{job.title}</h4>
                 <div className="flex gap-2 flex-wrap">
                   {job.tags.map((tag, i) => (
-                    <span key={i} className="bg-[#EAF6FB] text-[#0B6E99] text-xs font-medium px-3 py-1 rounded-full">
+                    <span key={i} className="bg-[#EAF6FB] text-[#0B6E99] text-xs font-medium px-3 py-1 rounded-full align-center">
                       {tag}
                     </span>
                   ))}
                 </div>
-                </div>
+              </div>
               <Link 
                 href={`/vacancy?position=${encodeURIComponent(job.title)}`}
                 className="bg-[#0B6E99] hover:bg-[#095b7f] text-white px-6 py-2 rounded-full flex items-center gap-1 transition"
               >
                 Apply <span>→</span>
               </Link>
->>>>>>> e2bc3d86d7c5bdaa755fab20e0ebeaef933e56ec
             </div>
           ))}
         </div>
       </section>
 
-      {/* Benefits Section - Styled to match the screenshot exactly */}
+      {/* Benefits Section */}
       <section className="py-16 bg-cover bg-center" style={{ backgroundImage: 'url("/images/bg image.png")' }}>
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="mb-12">
@@ -237,7 +215,7 @@ export default function CareerPage() {
         </div>
       </section>
 
-      {/* Contact Section - Styled to match the screenshot */}
+      {/* Contact Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -271,7 +249,7 @@ export default function CareerPage() {
                 </div>
               </div>
 
-              {/* Social Media Links - Styled to match the screenshot */}
+              {/* Social Media Links */}
               <div className="pt-6">
                 <p className="font-bold text-gray-900 mb-4">FOLLOW US ON SOCIAL MEDIA</p>
                 <div className="grid grid-cols-2 gap-4">
@@ -341,8 +319,7 @@ export default function CareerPage() {
                     <span className="text-sm text-gray-600 mr-2">Attach your CV</span>
                     <div className="w-5 h-5 flex items-center justify-center text-white">
                       <span className="text-white text-xs">
-                        {" "}
-                        <img src="/images/footer/load file.png" />
+                        <img src="/images/footer/load file.png" alt="Upload" />
                       </span>
                     </div>
                   </div>
