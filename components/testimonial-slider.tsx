@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 
 const testimonialSets = [
@@ -11,14 +10,14 @@ const testimonialSets = [
         "We absolutely loved working with the team! The Skill Koala site turned out even better than we imagined — fun, modern, and super engaging. Huge thanks for bringing our vision to life! The UI is clean, and the UX is intuitive — exactly what we needed for interactive learning.",
       name: "Alice Rosenberg",
       title: "co-owner",
-      logo: "/images/Author image.png", // Replace with your actual logo path
+      logo: "/images/Author image.png",
     },
     {
       quote:
         "We're very pleased with the website the team developed for Autorepair. It's clean, fast, and makes it easy for customers to find the parts they need. The user experience is smooth, and the backend is simple to manage. Excellent work and reliable communication throughout the project!",
       name: "John Carter",
       title: "Project Manager",
-      logo: "/images/Author image.png", // Replace with your actual logo path
+      logo: "/images/Author image.png",
     },
   ],
   [
@@ -27,14 +26,14 @@ const testimonialSets = [
         "The team delivered an exceptional e-commerce platform that exceeded our expectations. Sales have increased by 40% since launch, and customer feedback has been overwhelmingly positive about the intuitive shopping experience.",
       name: "Sarah Johnson",
       title: "Marketing Director",
-      logo: "/images/Author image.png", // Replace with your actual logo path
+      logo: "/images/Author image.png",
     },
     {
       quote:
         "Working with this team transformed our outdated website into a modern, responsive platform. Their attention to detail and understanding of our brand was impressive. The new site has significantly improved our conversion rates.",
       name: "Michael Chen",
       title: "CEO, TechSolutions",
-      logo: "/images/Author image.png", // Replace with your actual logo path
+      logo: "/images/Author image.png",
     },
   ],
   [
@@ -43,14 +42,14 @@ const testimonialSets = [
         "The mobile app they developed for our healthcare service has streamlined patient communication and appointment scheduling. The interface is clean, accessible, and our staff required minimal training to use it effectively.",
       name: "Dr. Emily Rodriguez",
       title: "Medical Director",
-      logo: "/images/Author image.png", // Replace with your actual logo path
+      logo: "/images/Author image.png",
     },
     {
       quote:
         "Our startup needed a distinctive brand identity and website to stand out in a competitive market. The team delivered a comprehensive solution that perfectly captured our vision while ensuring excellent user experience.",
       name: "David Park",
       title: "Founder, InnovateTech",
-      logo: "/images/Author image.png", // Replace with your actual logo path
+      logo: "/images/Author image.png",
     },
   ],
 ]
@@ -69,94 +68,70 @@ export default function TestimonialsSection() {
   const progressPercentage = ((currentSlide + 1) / testimonialSets.length) * 100
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-blue-50 to-blue-100">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="mb-12">
-            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-4 bg-blue-600 text-white border-blue-600">
-              TESTIMONIALS
-            </div>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
-              WHAT OUR <span className="text-blue-600">CLIENTS</span> SAY
-            </h2>
+    <section className="py-16 md:py-20 bg-gradient-to-r from-white via-blue-50 to-blue-100 overflow-hidden">
+      <div className="relative max-w-screen-xl mx-auto px-6">
+        {/* Header Container */}
+        <div className="mb-12">
+          <p className="text-xs font-bold uppercase text-blue-600 tracking-wide">TESTIMONIALS</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            WHAT OUR <span className="text-gray-900">CLIENTS</span> SAY
+          </h2>
+        </div>
+
+        {/* Testimonials and Arrows Container */}
+        <div className="flex items-start gap-6 mb-12">
+          {/* Arrows */}
+          <div className="flex gap-3 mt-2">
+            <button
+              onClick={prevSlide}
+              aria-label="Previous testimonials"
+              className="flex items-center justify-center w-9 h-9 transition"
+            >
+              <Image src="/images/left arrow.png" alt="Previous" width={36} height={36} />
+            </button>
+            <button
+              onClick={nextSlide}
+              aria-label="Next testimonials"
+              className="flex items-center justify-center w-9 h-9 transition"
+            >
+              <Image src="/images/right arrow.png" alt="Next" width={36} height={36} />
+            </button>
           </div>
 
-          <div className="relative">
-            {/* Navigation Arrows */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10 hidden lg:block">
-              <button
-                onClick={prevSlide}
-                className="w-12 h-12 rounded-full bg-gray-400 text-white flex items-center justify-center hover:bg-gray-500 transition-colors shadow-lg"
-                aria-label="Previous testimonials"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-            </div>
-
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10 hidden lg:block">
-              <button
-                onClick={nextSlide}
-                className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors shadow-lg"
-                aria-label="Next testimonials"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Testimonials */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-              {testimonialSets[currentSlide].map((testimonial, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm">
-                  <div className="mb-4">
-                    <p className="text-gray-800 text-base leading-relaxed">{testimonial.quote}</p>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 mr-3 flex-shrink-0">
-                      <Image
-                        src={testimonial.logo || "/placeholder.svg?height=24&width=24"}
-                        alt={`${testimonial.name} company logo`}
-                        width={24}
-                        height={24}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <div>
-                      <div className="text-gray-900 font-semibold text-sm">{testimonial.name}</div>
-                      <div className="text-gray-600 text-sm">{testimonial.title}</div>
-                    </div>
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1">
+            {testimonialSets[currentSlide].map((testimonial, index) => (
+              <div key={index} className="flex flex-col justify-between h-full">
+                <p className="text-gray-800 text-sm leading-relaxed relative">
+                  <span className="text-blue-600 text-2xl mr-2 align-top">“</span>
+                  {testimonial.quote}
+                  <span className="text-blue-600 text-2xl ml-2 align-bottom">”</span>
+                </p>
+                <div className="mt-6 flex items-center">
+                  <Image
+                    src={testimonial.logo}
+                    alt={testimonial.name}
+                    width={32}
+                    height={32}
+                    className="rounded-full mr-3"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.title}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Mobile Navigation */}
-            <div className="flex justify-center items-center mb-6 lg:hidden space-x-4">
-              <button
-                onClick={prevSlide}
-                className="w-10 h-10 rounded-full bg-gray-400 text-white flex items-center justify-center hover:bg-gray-500 transition-colors"
-                aria-label="Previous testimonials"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors"
-                aria-label="Next testimonials"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Progress Bar */}
-            <div className="w-full max-w-md mx-auto">
-              <div className="w-full bg-gray-300 rounded-full h-1">
-                <div
-                  className="bg-blue-600 h-1 rounded-full transition-all duration-300 ease-out"
-                  style={{ width: `${progressPercentage}%` }}
-                ></div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Progress Bar */}
+        <div className="w-full max-w-md mx-auto">
+          <div className="w-full bg-gray-200 rounded-full h-1">
+            <div
+              className="h-1 rounded-full transition-all duration-300 ease-out bg-gradient-to-r from-blue-600 via-purple-500 to-red-500"
+              style={{ width: `${progressPercentage}%` }}
+            ></div>
           </div>
         </div>
       </div>

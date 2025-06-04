@@ -72,9 +72,12 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center space-x-2">
+          <Link href="/quote">
           <Button className="bg-[#004e63] text-white hover:bg-[#003b4e] px-6 rounded-full hidden md:inline-flex">
             Get Quote
           </Button>
+        </Link>
+
           <MobileMenu />
         </div>
       </div>
