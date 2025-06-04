@@ -8,16 +8,9 @@
 import React, { useState } from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
+import MultiStepForm from './MultiStepForm';
 
-const SLIDES = [
-  "Custom digital solutions for every business need.",
-  "Seamless integration, innovative design, and reliable support.",
-  "Empowering your brand with technology and creativity.",
-  "From web to mobile, marketing to support—one partner for all.",
-  "Grow your business with our expert team and proven strategies."
-]
-
-const SERVICES = [
+export const SERVICES = [
   {
     label: "App Development",
     value: "app-development",
@@ -125,10 +118,9 @@ const SERVICES = [
   }
 ]
 
-const HERO_IMAGE = "/images/bg image.png" // fallback if hero-banner.jpg not found
+const HERO_IMAGE = "/images/services/hero-img-mainSection.jpg" // Updated hero image path
 
 const MainSection: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
   const [serviceIdx, setServiceIdx] = useState(0)
   const [subIdx, setSubIdx] = useState(0)
   const router = useRouter()
@@ -151,95 +143,22 @@ const MainSection: React.FC = () => {
   }
 
   return (
-    <section className="bg-white py-10 md:py-16 border-b">
+    <section className="bg-white border-b">
       <div className="container mx-auto px-4 md:px-6">
-        {/* Heading */}
-        <h1 className="text-3xl md:text-5xl font-bold text-black mb-2">
-          <span className="text-[#1b8bf9]">SERVICES</span> FOR YOUR BUSINESS
-        </h1>
-        {/* Carousel */}
-        <div className="flex items-center gap-4 mb-8">
-          <button
-            aria-label="Previous slide"
-            onClick={() => setCurrentSlide((prev) => (prev === 0 ? SLIDES.length - 1 : prev - 1))}
-            className="rounded-full bg-gray-200 hover:bg-blue-100 p-2 text-[#1b8bf9] transition-colors"
-            type="button"
-          >
-            &#8592;
-          </button>
-          <div className="flex-1 text-lg md:text-2xl font-medium text-gray-700 text-center min-h-[2.5rem]">
-            {SLIDES[currentSlide]}
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="w-full md:w-1/3 mb-6 md:mb-0">
+            <h1 className="text-3xl md:text-5xl font-bold text-black mb-8">
+              <span className="text-[#1b8bf9]">SERVICES</span> FOR YOUR BUSINESS
+            </h1>
+            <MultiStepForm />
           </div>
-          <button
-            aria-label="Next slide"
-            onClick={() => setCurrentSlide((prev) => (prev === SLIDES.length - 1 ? 0 : prev + 1))}
-            className="rounded-full bg-gray-200 hover:bg-blue-100 p-2 text-[#1b8bf9] transition-colors"
-            type="button"
-          >
-            &#8594;
-          </button>
-        </div>
-        {/* Two-column layout */}
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Left: Form */}
-          <form
-            className="w-full md:w-1/2 bg-white border border-gray-200 rounded-lg shadow-md p-6 mb-6 md:mb-0"
-            onSubmit={handleNext}
-            aria-label="Service selection form"
-          >
-            <div className="mb-4">
-              <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-1">
-                Services
-              </label>
-              <select
-                id="service"
-                name="service"
-                className="w-full border border-gray-300 rounded-md p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
-                value={serviceIdx}
-                onChange={handleServiceChange}
-                required
-              >
-                {SERVICES.map((s, idx) => (
-                  <option value={idx} key={s.value}>
-                    {s.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="mb-4">
-              <label htmlFor="subservice" className="block text-sm font-semibold text-gray-700 mb-1">
-                Subservices
-              </label>
-              <select
-                id="subservice"
-                name="subservice"
-                className="w-full border border-gray-300 rounded-md p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
-                value={subIdx}
-                onChange={handleSubChange}
-                required
-              >
-                {SERVICES[serviceIdx].sub.map((sub, idx) => (
-                  <option value={idx} key={sub}>
-                    {sub}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <button
-              type="submit"
-              className="w-full py-2 bg-[#1b8bf9] text-white rounded-md font-semibold text-base hover:bg-[#00647D] transition-colors"
-            >
-              Next
-            </button>
-          </form>
-          {/* Right: Hero Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-2/3 flex justify-center h-full">
             <Image
               src={HERO_IMAGE}
               alt="Business services hero banner"
-              width={600}
-              height={400}
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
+              width={800}
+              height={500}
+              className="w-full h-full object-cover rounded-lg shadow-md"
               priority
             />
           </div>
