@@ -73,11 +73,21 @@ export default function Footer() {
             </div>
             <div>
               <span className="font-semibold text-white">Jobs & Careers Queries</span><br />
+              <div>
+              
+            <span className="inline-flex items-center gap-1">
+            <Link href="/career" className="text-gray-300 hover:underline inline-flex items-center gap-1">
+              Career
+              <Image src="/images/arrow (2).png" alt="Arrow" width={12} height={12} />
+            </Link>
+            </span>
+            </div>
               <span className="inline-flex items-center gap-1">
                 <Image src="/images/footer/SuitcaseSimple.png" alt="HR" width={12} height={12} />
                 hr@aow.co.in
               </span>
             </div>
+           
           </div>
         </div>
 
