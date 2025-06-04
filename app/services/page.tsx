@@ -1,14 +1,11 @@
 import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
 
-// Define type for Service
 interface Service {
   title: string
   items: string[]
   image: string
 }
 
-// Services Data with unique image paths
 const services: Service[] = [
   {
     title: "APP DEVELOPMENT",
@@ -125,8 +122,12 @@ export default function Services(): JSX.Element {
             >
               {/* Top-right icon */}
               <div className="absolute top-4 right-4">
-                <div className="h-8 w-8 rounded-full bg-black flex items-center justify-center">
-                  <ArrowUpRight className="h-5 w-5 text-white" />
+                <div className="h-8 w-8 rounded-full flex items-center justify-center">
+                  <img
+                    src="/images/arrow.svg" // Placeholder for the new arrow image
+                    alt="Arrow"
+                    className="h-5 w-5"
+                  />
                 </div>
               </div>
 
@@ -162,10 +163,14 @@ export default function Services(): JSX.Element {
         <div className="mt-8 text-right">
           <Link
             href="/about-services"
-            className="inline-flex items-center text-sm text-black font-medium hover:underline"
+            className="inline-flex items-center text-sm text-blue font-medium hover:underline"
           >
             More about services
-            <ArrowUpRight className="h-4 w-4 ml-1" />
+            <img
+              src="/images/arrow (1).png" // Placeholder for the new arrow image
+              alt="Arrow"
+              className="h-4 w-4 ml-1"
+            />
           </Link>
         </div>
       </div>
