@@ -2,52 +2,62 @@ import Image from "next/image"
 
 const uniqueFeatures = [
   {
-    iconImage: "/images/faetures/1.png", // Replace with your actual image path
+    iconImage: "/images/faetures/1.png",
     title: "ADAPT SOLUTIONS, RATHER THAN TEMPLATES",
     description:
-      "Initially we understand our customers' concerns and requirements, services, and others, then after we progress with the channeled works that help in excellent results.",
+      "Initially we understand our customers' concerns on their business goals, audience, and others; then after we progress with the channelled works that bring excellent results.",
+    bgColor: "bg-[#EAF5FF]", // light blue 1
   },
   {
-    iconImage: "/images/faetures/2.png", // Fixed: removed extra slash
+    iconImage: "/images/faetures/2.png",
     title: "END-TO-END SERVICES",
     description:
-      "We offer services from social media posters to comprehensive digital marketing. We manage go for all your digital requirements. We ensure effective strategies that rely on success for the growth and upliftment of your business.",
+      "We offer a range of services—from social media posters to SEO, short videos, and reels. It's a one-stop solution for all your digital needs, tailored to help your brand stand out.",
+    bgColor: "bg-white", // light blue 2
   },
   {
-    iconImage: "/images/faetures/3.png", // Replace with your actual image path
+    iconImage: "/images/faetures/3.png",
     title: "TRACK RECORD SINCE INCEPTION",
     description:
-      "With a span of two years, we have served 85+ customers and still counting. We have worked with various streams proficiently in empowering businesses.",
+      "With over two years of experience, we have successfully served 85+ happy clients across various industries, helping them grow and strengthen their online presence.",
+    bgColor: "bg-[#EAF5FF]", // repeat color 1
   },
   {
-    iconImage: "/images/faetures/4.png", // Replace with your actual image path
+    iconImage: "/images/faetures/4.png",
     title: "CUSTOMER SUPPORT",
     description:
-      "We provide 24/7 support, ensuring our customers receive prompt assistance and a seamless experience at any time of the day.",
+      "With over two years of experience, we have successfully served 85+ happy clients across various industries, helping them grow and strengthen their online presence.",
+    bgColor: "bg-white", // repeat color 2
   },
   {
-    iconImage: "/images/faetures/5.png", // Replace with your actual image path
+    iconImage: "/images/faetures/5.png",
     title: "INNOVATION",
-    description: "To stay ahead in the competition, we use cutting-edge technologies for the process of our functions.",
+    description:
+      "To stay ahead in a competitive market, we use the latest technologies in every stage of our work process, bringing innovation and efficiency to our services.",
+    bgColor: "bg-[#EAF5FF]",
   },
   {
-    iconImage: "/images/faetures/6.png", // Replace with your actual image path
+    iconImage: "/images/faetures/6.png",
     title: "AFFORDABILITY",
     description:
-      "Our pricing comforts the customers as we are concerned about making digital services available to everyone.",
+      "To stay ahead in a competitive market, we use the latest technologies in every stage of our work process, bringing innovation and efficiency to our services.",
+    bgColor: "bg-white",
   },
 ]
 
 export default function UniqueFeatures() {
   return (
-    <section className="py-8 md:py-10 bg-white">
+    <section
+      className="py-16 bg-cover bg-no-repeat bg-center"
+      style={{ backgroundImage: "url('/images/bg image.png')" }} // Replace with your real path
+    >
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
-        <div className="mb-8">
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-3 bg-blue-50 text-blue-600 border-blue-200">
+        <div className="mb-12">
+          <div className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold mb-3 bg-blue-50 text-blue-600 border-blue-200">
             EXCEPTIONAL FEATURES
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             WHAT MAKES AOW UNIQUE COMPARED TO OTHERS?
           </h2>
           <p className="text-gray-600 text-lg max-w-4xl leading-relaxed">
@@ -61,21 +71,23 @@ export default function UniqueFeatures() {
           {uniqueFeatures.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 group"
+              className={`rounded-[24px] p-6 border border-blue-200 ${feature.bgColor} transition-all duration-300`}
             >
               {/* Icon */}
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-700 transition-colors duration-300 p-2">
+              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mb-4">
                 <Image
-                  src={feature.iconImage || "/placeholder.svg"}
+                  src={feature.iconImage}
                   alt={feature.title}
-                  width={24}
-                  height={24}
-                  className="w-6 h-6 object-contain filter brightness-0 invert"
+                  width={20}
+                  height={20}
+                  className="w-5 h-5 object-contain filter brightness-0 invert"
                 />
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{feature.title}</h3>
+              <h3 className="text-md font-bold text-gray-900 uppercase mb-2 leading-snug">
+                {feature.title}
+              </h3>
 
               {/* Description */}
               <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>

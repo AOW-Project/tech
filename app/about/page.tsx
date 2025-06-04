@@ -150,11 +150,11 @@ const AboutPage = () => {
               <h3 className="text-lg font-bold text-black">What we offer:</h3>
               <ul className="space-y-3 mt-4">
                 {[
-                  "Tailored Digital Strategies – built around your unique goals and audience",
-                  "End-to-End Development – from concept to launch and beyond",
-                  "Creative UI/UX Design – intuitive, engaging, and user-focused",
-                  "Scalable Solutions – ready to grow with your business",
-                  "Ongoing Support – we're with you every step of the way",
+                  "Tailored Digital Strategies - built around your unique goals and audience",
+                  "End-to-End Development - from concept to launch and beyond",
+                  "Creative UI/UX Design - intuitive, engaging, and user-focused",
+                  "Scalable Solutions - ready to grow with your business",
+                  "Ongoing Support - we're with you every step of the way",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-black text-base leading-relaxed">
                     <img src="/images/about/check.png" alt="checkmark" className="w-5 h-5 mt-0.5 flex-shrink-0" />
@@ -193,11 +193,11 @@ const AboutPage = () => {
               <h3 className="text-lg font-bold text-black">What drives our vision:</h3>
               <ul className="space-y-3 mt-4">
                 {[
-                  "Innovation First – we strive to bring fresh ideas to every project",
-                  "Creativity at Core – standing out means thinking differently",
-                  "Proven Results – data-driven, tested, and trusted outcomes",
-                  "Global Reach – solutions that speak to audiences everywhere",
-                  "Client-Centered Approach – your success defines ours",
+                  "Innovation First - we strive to bring fresh ideas to every project",
+                  "Creativity at Core - standing out means thinking differently",
+                  "Proven Results - data-driven, tested, and trusted outcomes",
+                  "Global Reach - solutions that speak to audiences everywhere",
+                  "Client-Centered Approach - your success defines ours",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-black text-base leading-relaxed">
                     <img src="/images/about/check.png" alt="checkmark" className="w-5 h-5 mt-0.5 flex-shrink-0" />
@@ -318,7 +318,7 @@ const AboutPage = () => {
                 success. We're here to make a difference!
               </p>
               <img
-                src="/images/about/4.jpg"
+                src="/images/about/5.jpg"
                 alt="Team celebration"
                 className="w-full rounded-xl object-cover h-48"
               />
@@ -327,7 +327,7 @@ const AboutPage = () => {
 
           {/* Right side: 4th image (full height) */}
           <img
-            src="/images/about/5.jpg"
+            src="/images/about/4.jpg"
             alt="Team working together"
             className="w-full rounded-xl object-cover"
             style={{ height: "calc(12rem + 12rem + 1.5rem)" }} // h-48 + h-48 + gap
