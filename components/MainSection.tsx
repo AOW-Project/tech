@@ -143,24 +143,30 @@ const MainSection: React.FC = () => {
   }
 
   return (
-    <section className="bg-white border-b">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row gap-8">
+    <section className="min-h-screen relative">
+      {/* Full Background Image */}
+      <Image 
+        src={HERO_IMAGE} 
+        alt="Business services hero banner" 
+        fill 
+        className="object-cover" 
+        priority 
+      />
+
+      {/* White to Transparent Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-white/80 to-transparent" />
+
+      {/* Content Container */}
+      <div className="relative z-10 container mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row gap-8 min-h-screen items-center">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h1 className="text-3xl md:text-5xl font-bold text-black mb-8">
+            <h1 className="text-3xl md:text-5xl font-bold text-black mb-8 ml-12">
               <span className="text-[#1b8bf9]">SERVICES</span> FOR YOUR BUSINESS
             </h1>
             <MultiStepForm />
           </div>
           <div className="w-full md:w-2/3 flex justify-center h-full">
-            <Image
-              src={HERO_IMAGE}
-              alt="Business services hero banner"
-              width={800}
-              height={500}
-              className="w-full h-full object-cover rounded-lg shadow-md"
-              priority
-            />
+            {/* Remove the Image component here since we're using it as background */}
           </div>
         </div>
       </div>

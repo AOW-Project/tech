@@ -14,7 +14,11 @@ interface FormData {
   company?: string;
 }
 
-const MultiStepForm: React.FC = () => {
+interface MultiStepFormProps {
+  isMobile?: boolean;
+}
+
+const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<FormData>({});
   const [serviceIdx, setServiceIdx] = useState(0);
@@ -239,7 +243,7 @@ const MultiStepForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full border border-[#1b8bf9] rounded-lg p-6">
+    <form onSubmit={handleSubmit} className="w-full border border-[#1b8bf9] rounded-sm p-6 ml-12">
       {/* Stepper Component */}
       <div className="flex justify-between mb-6">
         {[...Array(totalSteps)].map((_, index) => (
