@@ -10,8 +10,8 @@ const trustedCompanies = [
 
 export default function TrustedCompanies() {
   return (
-    <section className="py-4 md:py-6 bg-gray-50"> {/* Reduced top padding */}
-      <div className="container mx-auto px-4 md:px-6">
+    <section className=" bg-gray-50"> {/* Reduced top padding */}
+      <div className="container mx-auto px-2 md:px-6">
         {/* Optional heading */}
         <div className="text-center mb-6">
           <p className="text-black text-lg md:text-xl font-bold uppercase tracking-wider">

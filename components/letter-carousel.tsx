@@ -35,7 +35,7 @@ const slides = [
     description:
       "Partnering with us for comprehensive UI/UX design services is easier. From wireframes to execution, we are aligned with your vision in building impactful designs that reach the right users to drive engagement.",
     features: ["User Research", "Intuitive Interfaces", "Design Systems", "Accessibility Focus"],
-    image: "/images/home page/3.png",
+    image: "/images/home page/slide11.png",
     service: "UI/UX Design Services",
   },
   {

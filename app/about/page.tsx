@@ -3,7 +3,7 @@ import "@fontsource/inter"
 
 const AboutPage = () => {
   return (
-    <div className="flex flex-col items-center w-full text-[#000]">
+    <div className="flex flex-col items-center w-full text-[#000] font-inter">
       {/* Hero Section */}
       <section
         className="w-full py-16 text-center font-[Nunito] relative bg-white"
@@ -18,13 +18,13 @@ const AboutPage = () => {
         <div className="relative z-10">
           <p className="text-3xl uppercase font-bold tracking-widest text-black">About Us</p>
           <h1 className="text-3xl md:text-5xl font-bold my-4 text-black">
-            WHERE <span className="text-blue-600">IDEAS</span> TURN INTO IMPACT
+            WHERE <span className="text-[#006D9F]blue-600">IDEAS</span> TURN INTO IMPACT
           </h1>
           <p className="max-w-2xl mx-auto text-md md:text-lg text-black">
             We are a team of experts, creative thinkers and passionate builders. With a futuristic approach, we deliver
             digital solutions that create impact.
           </p>
-          <button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">
+          <button className="mt-6 bg-[#006D9F] text-white px-6 py-2 rounded-full hover:bg-blue-700">
             Explore solutions
           </button>
         </div>
@@ -33,7 +33,7 @@ const AboutPage = () => {
       {/* Join Our Team */}
       <section className="w-full flex justify-center bg-white">
         <div className="w-full max-w-6xl px-4 py-20 font-[Inter]">
-          <p className="text-sm text-blue-600 font-semibold uppercase mb-2">Who we are?</p>
+          <p className="text-sm text-[#006D9F] font-semibold uppercase mb-2">Who we are?</p>
           <h2 className="text-3xl font-bold mb-10 text-black">JOIN TO OUR TEAM</h2>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between md:gap-x-16 gap-y-8">
@@ -74,9 +74,9 @@ const AboutPage = () => {
       >
         {/* Content without the overlay */}
         <div className="w-full max-w-6xl px-4 relative z-10">
-          <p className="text-sm text-blue-600 font-semibold uppercase mb-2">Open Positions</p>
+          <p className="text-sm text-[#006D9F] font-semibold uppercase mb-2">Open Positions</p>
           <h2 className="text-3xl font-bold mb-10 text-black">
-            BUILD THE <span className="text-blue-600">FUTURE</span> WITH US
+            BUILD THE <span className="text-[#006D9F]">FUTURE</span> WITH US
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-4">
@@ -115,7 +115,7 @@ const AboutPage = () => {
           </div>
 
           <div className="text-right mt-6">
-            <a href="#" className="text-sm text-blue-600 flex items-center justify-end gap-1">
+            <a href="#" className="text-sm text-[#006D9F] flex items-center justify-end gap-1">
               More about services <span>{/* Place your arrow icon here */}</span>
             </a>
           </div>
@@ -125,7 +125,7 @@ const AboutPage = () => {
       {/* Mission Section */}
       <section className="w-full flex justify-center bg-white">
         <div className="w-full max-w-6xl px-4 py-20 font-[Inter]">
-          <p className="text-sm text-blue-600 font-semibold uppercase mb-2">Our Mission</p>
+          <p className="text-sm text-[#006D9F] font-semibold uppercase mb-2">Our Mission</p>
           <h2 className="text-3xl font-bold mb-10 whitespace-nowrap text-black">
             MAKING YOUR BRAND SHINE IN THE DIGITAL WORLD
           </h2>
@@ -170,7 +170,7 @@ const AboutPage = () => {
       {/* Vision Section */}
       <section className="w-full flex justify-center bg-white">
         <div className="w-full max-w-6xl px-4 py-20 font-[Inter]">
-          <p className="text-sm text-blue-600 font-semibold uppercase mb-2">Our Vision</p>
+          <p className="text-sm text-[#006D9F] font-semibold uppercase mb-2">Our Vision</p>
           <h2 className="text-3xl font-bold mb-10 whitespace-nowrap text-black">CREATIVE IMPACT, GLOBAL REACH</h2>
 
           <div className="flex flex-col md:flex-row items-stretch justify-between md:gap-x-16 gap-y-8">
@@ -222,9 +222,9 @@ const AboutPage = () => {
       >
         {/* Content without the overlay */}
         <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <p className="text-sm text-blue-600 font-semibold uppercase mb-4 text-left">Our Clients</p>
+          <p className="text-sm text-[#006D9F] font-semibold uppercase mb-4 text-left">Our Clients</p>
           <h2 className="text-4xl font-bold mb-12 text-black text-left">
-            REAL STORIES. REAL <span className="text-blue-600">RESULTS</span>
+            REAL STORIES. REAL <span className="text-[#006D9F]">RESULTS</span>
           </h2>
 
           <div className="relative flex items-center justify-center">
@@ -247,7 +247,7 @@ const AboutPage = () => {
                     clean, and the UX is intuitive — exactly what we needed for interactive learning.
                   </blockquote>
                   {/* Quote mark positioned after the text */}
-                  <span className="text-4xl text-blue-600 font-bold ml-2 flex-shrink-0">"</span>
+                  <span className="text-4xl text-[#006D9F] font-bold ml-2 flex-shrink-0">"</span>
                 </div>
 
                 <div className="flex items-center gap-3 mt-6">
@@ -264,7 +264,7 @@ const AboutPage = () => {
               <img
                 src="/images/right arrow.png"
                 alt="Next testimonial"
-                className="w-12 h-12 cursor-pointer text-blue-600 hover:opacity-80 transition-opacity"
+                className="w-12 h-12 cursor-pointer text-[#006D9F] hover:opacity-80 transition-opacity"
               />
             </div>
           </div>
@@ -276,9 +276,9 @@ const AboutPage = () => {
     <section className="px-6 py-16 bg-white">
       <div className="max-w-6xl mx-auto space-y-10">
         <div className="mb-8">
-          <p className="text-sm font-medium text-blue-600 mb-2">OUR TEAM</p>
+          <p className="text-sm font-medium text-[#006D9F] mb-2">OUR TEAM</p>
           <h2 className="text-3xl font-bold">
-            THE FACES OF <span className="text-blue-600">OUR COMPANY</span>
+            THE FACES OF <span className="text-[#006D9F]">OUR COMPANY</span>
           </h2>
         </div>
 

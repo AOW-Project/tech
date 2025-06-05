@@ -34,21 +34,22 @@ const Portfolio = () => {
   const [activeIndex, setActiveIndex] = React.useState(0)
 
   return (
-    <section id="portfolio" className="py-8 md:py-10 bg-gray-50">
+    <section id="portfolio" className="py-8 md:py-10 bg-gray-50"
+    style={{ backgroundImage: "url('/images/bg image.png')" }} >
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="flex justify-between items-start mb-8">
           <div>
-            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-3 bg-blue-50 text-blue-600 border-blue-200">
+            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-3 bg-blue-50 text-[#084C6B] border-blue-200">
               PORTFOLIO
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
-              SHOWCASING <span className="text-blue-600">EXCELLENCE</span>
+              SHOWCASING <span className="text-[#084C6B]">EXCELLENCE</span>
             </h2>
           </div>
           <Link
             href="/portfolio"
-            className="text-blue-600 text-sm font-medium hover:text-blue-700 transition-colors flex items-center mt-8"
+            className="text-[#084C6B] text-sm font-medium hover:text-[#084C6B] transition-colors flex items-center mt-8"
           >
             More projects →
           </Link>
@@ -82,8 +83,8 @@ const Portfolio = () => {
             {portfolioItems.map((_, index) => (
               <div
                 key={index}
-                className={`h-1 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? "w-16 bg-blue-600" : "w-4 bg-gray-300"
+                className={`h-[8px]  rounded-full transition-all duration-300 ${
+                  index === activeIndex ? "w-16 bg-[#084C6B]" : "w-[350px] bg-gray-300"
                 }`}
               ></div>
             ))}

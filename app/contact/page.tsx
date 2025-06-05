@@ -35,13 +35,13 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-inter">
       {/* Hero Section with Background */}
       <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">CONTACT US</h1>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            YOUR NEEDS, OUR <span className="text-blue-600">RESOLUTIONS</span>
+            YOUR NEEDS, OUR <span className="text-[#006D9F]">RESOLUTIONS</span>
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-base leading-relaxed">
             We not only offer a variety of services but also provide/technorated solutions to cross the hurdles of
@@ -58,9 +58,9 @@ export default function ContactPage() {
               {/* Left Column - Contact Info */}
               <div className="lg:w-1/2 space-y-6">
                 <div>
-                  <span className="text-blue-600 text-xs font-bold uppercase tracking-wider">OUR CONTACTS</span>
+                  <span className="text-[#006D9F] text-xs font-bold uppercase tracking-wider">OUR CONTACTS</span>
                   <h3 className="text-3xl font-bold text-gray-900 mt-3 mb-4">
-                    GET IN TOUCH <span className="text-blue-600">WITH US!</span>
+                    GET IN TOUCH <span className="text-[#006D9F]">WITH US!</span>
                   </h3>
                   <p className="text-gray-700 text-sm leading-relaxed mb-6">
                     "Reach out via phone, email, or social media. Send us your project details or inquiries
@@ -73,12 +73,12 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-bold text-gray-900 text-sm mb-4 uppercase">CONTACT US</h4>
                     <div className="flex items-center space-x-3 mb-3">
-                      <Phone className="w-4 h-4 text-blue-600" />
+                      <Phone className="w-4 h-4 text-[#006D9F]" />
                       <span className="text-gray-900 text-sm font-bold">+91 8073450249</span>
                       <span className="text-gray-600 text-sm font-medium">INDIA</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Mail className="w-4 h-4 text-blue-600" />
+                      <Mail className="w-4 h-4 text-[#006D9F]" />
                       <span className="text-gray-900 text-sm font-bold">support@aow.co.in</span>
                     </div>
                   </div>
@@ -146,11 +146,11 @@ export default function ContactPage() {
               {/* Left Column - Question Section */}
               <div className="lg:w-1/2">
                 <div className="mb-8">
-                  <span className="text-blue-600 text-xs font-bold uppercase tracking-wider">LET'S TALK</span>
+                  <span className="text-[#006D9F] text-xs font-bold uppercase tracking-wider">LET'S TALK</span>
                   <h3 className="text-3xl font-bold text-gray-900 mt-3 mb-4">
                     HAVE A QUESTION
                     <br />
-                    OR A PROJECT IN <span className="text-blue-600">MIND?</span>
+                    OR A PROJECT IN <span className="text-[#006D9F]">MIND?</span>
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">
                     Post your project request, information about the project details, etc., by filling in the form on
@@ -174,7 +174,7 @@ export default function ContactPage() {
               {/* Right Column - Contact Form */}
               <div className="lg:w-1/2">
                 <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-6">
-                  <h3 className="text-blue-600 text-base font-medium mb-6">LET'S DISCUSS YOUR PROJECT!</h3>
+                  <h3 className="text-[#006D9F] text-base font-medium mb-6">LET'S DISCUSS YOUR PROJECT!</h3>
 
                   <form className="space-y-4" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-2 gap-4">
@@ -262,7 +262,7 @@ export default function ContactPage() {
                     <div className="flex items-center space-x-2">
                       <span className="text-sm text-gray-600">Drop a file</span>
                       <label className="cursor-pointer">
-                        <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                        <div className="w-6 h-6 bg-[#006D9F] rounded-full flex items-center justify-center">
                           <Upload className="h-3 w-3 text-white" />
                         </div>
                         <input type="file" className="hidden" onChange={handleFileChange} />

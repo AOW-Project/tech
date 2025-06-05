@@ -48,19 +48,20 @@ const uniqueFeatures = [
 export default function UniqueFeatures() {
   return (
     <section
-      className="py-16 bg-cover bg-no-repeat bg-center"
-      style={{ backgroundImage: "url('/images/bg image.png')" }} // Replace with your real path
+      className="py-10 bg-cover bg-no-repeat bg-center font-inter bg-white" 
+
+       // Replace with your real path
     >
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold mb-3 bg-blue-50 text-blue-600 border-blue-200">
+          <div className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold mb-3 bg-blue-50 text-[#084C6B] border-[#006D9F]">
             EXCEPTIONAL FEATURES
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             WHAT MAKES AOW UNIQUE COMPARED TO OTHERS?
           </h2>
-          <p className="text-gray-600 text-lg max-w-4xl leading-relaxed">
+          <p className="text-black text-lg max-w-4xl leading-relaxed">
             We stand out blending with a team of experts working all together. Client-first approach and innovation
             makes us different from others. So here are a few points below:
           </p>
@@ -71,10 +72,10 @@ export default function UniqueFeatures() {
           {uniqueFeatures.map((feature, index) => (
             <div
               key={index}
-              className={`rounded-[24px] p-6 border border-blue-200 ${feature.bgColor} transition-all duration-300`}
+              className={`rounded-[24px] p-6 border border-[#006D9F] ${feature.bgColor} transition-all duration-300`}
             >
               {/* Icon */}
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-[#084C6B] rounded-full flex items-center justify-center mb-4">
                 <Image
                   src={feature.iconImage}
                   alt={feature.title}
@@ -85,12 +86,12 @@ export default function UniqueFeatures() {
               </div>
 
               {/* Title */}
-              <h3 className="text-md font-bold text-gray-900 uppercase mb-2 leading-snug">
+              <h3 className="text-md font-bold text-black uppercase mb-2 leading-snug">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-black text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

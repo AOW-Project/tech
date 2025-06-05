@@ -69,10 +69,10 @@ export default function TestimonialsSection() {
 
   return (
     <section className="py-16 md:py-20 bg-gradient-to-r from-white via-blue-50 to-blue-100 overflow-hidden">
-      <div className="relative max-w-screen-xl mx-auto px-6">
+      <div className="relative max-w-screen-xl mx-auto px-6 font-nunito">
         {/* Header Container */}
         <div className="mb-12">
-          <p className="text-xs font-bold uppercase text-blue-600 tracking-wide">TESTIMONIALS</p>
+          <p className="text-xs font-bold uppercase text-[#006D9F] tracking-wide">TESTIMONIALS</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
             WHAT OUR <span className="text-gray-900">CLIENTS</span> SAY
           </h2>
@@ -102,10 +102,10 @@ export default function TestimonialsSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1">
             {testimonialSets[currentSlide].map((testimonial, index) => (
               <div key={index} className="flex flex-col justify-between h-full">
-                <p className="text-gray-800 text-sm leading-relaxed relative">
-                  <span className="text-blue-600 text-2xl mr-2 align-top">“</span>
+                <p className="text-black text-[16px] leading-relaxed relative">
+                  <span className="text-[#006D9F] text-2xl mr-2 align-top">“</span>
                   {testimonial.quote}
-                  <span className="text-blue-600 text-2xl ml-2 align-bottom">”</span>
+                  <span className="text-[#006D9F] text-2xl ml-2 align-bottom">”</span>
                 </p>
                 <div className="mt-6 flex items-center">
                   <Image
@@ -116,8 +116,8 @@ export default function TestimonialsSection() {
                     className="rounded-full mr-3"
                   />
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600">{testimonial.title}</p>
+                    <p className="text-[16px] font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-[16px] text-black">{testimonial.title}</p>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function TestimonialsSection() {
         <div className="w-full max-w-md mx-auto">
           <div className="w-full bg-gray-200 rounded-full h-1">
             <div
-              className="h-1 rounded-full transition-all duration-300 ease-out bg-gradient-to-r from-blue-600 via-purple-500 to-red-500"
+              className="h-1 rounded-full transition-all duration-300 ease-out bg-gradient-to-r from-[#006D9F] via-[#006D9F] to-[#006D9F]"
               style={{ width: `${progressPercentage}%` }}
             ></div>
           </div>
