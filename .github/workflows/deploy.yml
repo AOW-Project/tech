@@ -28,7 +28,7 @@ jobs:
       - name: Add SSH key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.AOWDESKTOP }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
       # Disable strict host checking (optional but convenient)
