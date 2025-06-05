@@ -1,0 +1,62 @@
+name: CI/CD-Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main                # Change this to your primary branch
+
+jobs:
+  deploy:
+    name: Deploy Aow-app to EC2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies & build
+        run: |
+          npm install
+          npm run build
+
+      # Copy SSH key to the runner and set permissions
+      - name: Add SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      # Disable strict host checking (optional but convenient)
+      - name: Add EC2 host to known_hosts
+        run: |
+          ssh-keyscan -H 3.89.127.136 >> ~/.ssh/known_hosts
+
+      # RSYNC or SSH commands to remote
+      - name: Deploy to EC2 over SSH
+        env:
+          NODE_ENV: production
+        run: |
+          ssh -i ~/.ssh/id_rsa ubuntu@3.89.127.136 << 'EOF'
+            set -e
+
+            cd /home/ubuntu/tech || exit 1
+
+            # Fetch latest code
+            git pull origin main
+
+            # Install any new dependencies
+            npm install
+
+            # Rebuild the aow-app
+            npm run build
+
+            # Restart via PM2
+            pm2 restart aow-app || pm2 start npm --name "aow-app" -- start
+
+            exit 0
+          EOF
