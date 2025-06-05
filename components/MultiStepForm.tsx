@@ -59,7 +59,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
       case 1:
         return (
           <div>
-            <h2 className="text-black text-lg font-semibold mb-2">Let's create something Extraordinary together!</h2>
+            <h2 className="text-black text-lg font-semibold mb-2">Let's create something Extraordinary together!!!</h2>
             <h3 className="text-[#1b8bf9] text-2xl font-bold mb-6">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
             <div className="mb-4">
               <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-1">
