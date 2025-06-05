@@ -171,7 +171,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
       case 3:
         return (
           <div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">Let's connect</h2>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">Let's connect!!!</h2>
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">
                 Name
