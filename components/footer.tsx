@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#042C33] text-white py-6 px-4 md:px-12">
+    <footer className="bg-[#0A2328] text-white py-6 px-4 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
 
         {/* Logo + Description */}
@@ -15,7 +15,7 @@ export default function Footer() {
             height={50}
             className="mb-4"
           />
-          <p className="text-[14px] text-gray-300 mb-3 leading-relaxed">
+          <p className="text-[16px] text-[#FFFFFF] mb-3 leading-relaxed">
             Our social media marketing team crafts custom campaigns aligned with your business objectives.
           </p>
           <div className="flex space-x-2 mt-2">
@@ -39,8 +39,8 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h4 className="font-semibold text-[14px] mb-2">OUR SERVICES</h4>
-          <ul className="space-y-1 text-[12px] text-gray-300">
+          <h4 className="font-semibold text-[16px] mb-2">OUR SERVICES</h4>
+          <ul className="space-y-1 text-[14px] text-[#FFFFFF]">
             <li>App Development</li>
             <li>Customer Support Services</li>
             <li>Digital Marketing</li>
@@ -55,28 +55,28 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="font-semibold text-[14px] mb-2">CONTACT US</h4>
-          <div className="text-[12px] text-gray-300 space-y-2">
+          <h4 className="font-semibold text-[16px] mb-2">CONTACT US</h4>
+          <div className="text-[14px] text-[#FFFFFF] space-y-2">
             <div>
-              <span className="font-semibold text-white">E-mail</span><br />
+              <span className="font-semibold text-[#FFFFFF]">E-mail</span><br />
               <span className="inline-flex items-center gap-1">
                 <Image src="/images/footer/vector (2).png" alt="Support" width={12} height={12} />
                 support@aow.co.in
               </span>
             </div>
             <div>
-              <span className="font-semibold text-white">For Sales Queries</span><br />
+              <span className="font-semibold text-[#FFFFF]F">For Sales Queries</span><br />
               <span className="inline-flex items-center gap-1">
                 <Image src="/images/footer/EnvelopeSimple.png" alt="Sales" width={12} height={12} />
                 sales@aow.co.in
               </span>
             </div>
             <div>
-              <span className="font-semibold text-white">Jobs & Careers Queries</span><br />
+              <span className="font-semibold text-[#FFFFFF]">Jobs & Careers Queries</span><br />
               <div>
               
             <span className="inline-flex items-center gap-1">
-            <Link href="/career" className="text-gray-300 hover:underline inline-flex items-center gap-1">
+            <Link href="/career" className="text-[#FFFFFF] hover:underline inline-flex items-center gap-1">
               Career
               <Image src="/images/arrow (2).png" alt="Arrow" width={12} height={12} />
             </Link>

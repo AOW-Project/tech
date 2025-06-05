@@ -14,11 +14,11 @@ export default function PortfolioPage() {
       <section className="bg-white py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-4 bg-[#e6f3f7] text-[#00647D]">
+            <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-4 bg-[#e6f3f7] text-[#084C6B]">
               Our Work
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#00647D] mb-6">OUR PORTFOLIO</h1>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#084C6B] mb-6">OUR PORTFOLIO</h1>
+            <p className="text-black text-lg leading-relaxed">
               Explore our latest projects and see how we've helped businesses transform their digital experiences
               through exceptional UI/UX design.
             </p>
@@ -50,7 +50,7 @@ export default function PortfolioPage() {
                 <div className="space-y-2">
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag, i) => (
-                      <span key={i} className="text-xs bg-[#e6f3f7] text-[#00647D] px-2 py-1 rounded-full">
+                      <span key={i} className="text-xs bg-[#e6f3f7] text-[#084C6B] px-2 py-1 rounded-full">
                         {tag}
                       </span>
                     ))}
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
                   <p className="text-gray-600 text-sm">{item.description}</p>
                   <Link
                     href={`/portfolio/${item.slug}`}
-                    className="text-[#00647D] text-sm font-medium flex items-center hover:underline"
+                    className="text-[#084C6B] text-sm font-medium flex items-center hover:underline"
                   >
                     View Case Study <ChevronRight className="h-4 w-4 ml-1" />
                   </Link>
@@ -81,7 +81,7 @@ export default function PortfolioPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors h-12 px-8 bg-[#00647D] text-white hover:bg-[#004e63]"
+              className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors h-12 px-8 bg-[#084C6B] text-white hover:bg-[#004e63]"
             >
               Start Your Project
               <ChevronRight className="ml-2 h-4 w-4" />

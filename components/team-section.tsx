@@ -21,15 +21,15 @@ const teamContent = [
 
 export default function TeamSection() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-white">
+    <section className="py-12 md:py-16 lg:py-20 bg-white font-inter">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-4 bg-blue-50 text-blue-600 border-blue-200">
+          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-4 bg-blue-50 text-[#006D9F] border-blue-200">
             OUR TEAM
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            LET'S GET <span className="text-blue-600">ACQUAINTED</span>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6">
+            LET'S GET <span className="text-[#006D9F]">ACQUAINTED</span>
           </h2>
         </div>
 
@@ -47,7 +47,7 @@ export default function TeamSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4 max-w-md">{teamContent[0].description}</p>
+              <p className="text-black text-[16px] leading-relaxed mt-4 max-w-md">{teamContent[0].description}</p>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ export default function TeamSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4 text-center">{teamContent[1].description}</p>
+              <p className="text-black text-[16px] leading-relaxed mt-4 text-center">{teamContent[1].description}</p>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export default function TeamSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed mt-4 max-w-md">{teamContent[2].description}</p>
+              <p className="text-black text-[16px] leading-relaxed mt-4 max-w-md">{teamContent[2].description}</p>
             </div>
           </div>
         </div>

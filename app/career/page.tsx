@@ -110,14 +110,14 @@ export default function CareerPage() {
     <div className={inter.className}>
       {/* Header Section */}
       <section
-        className="text-center py-20 bg-cover bg-center"
+        className="text-center py-20 bg-cover bg-center font-inter"
         style={{ backgroundImage: 'url("/images/bg image.png")' }}
       >
-        <h2 className="text-2xl md:text-3xl text-gray-600 font-medium tracking-wide">CAREER</h2>
-        <h1 className="text-6xl md:text-7xl font-bold text-black mt-3">
+        <h2 className="text-2xl md:text-3xl text-black font-medium tracking-wide">CAREER</h2>
+        <h1 className="text-5xl md:text-5xl font-bold text-black mt-3">
           JOIN OUR <span className="text-[#0B6E99]">TEAM</span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-500 mt-5 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-black mt-5 max-w-2xl mx-auto">
           Pave your career path with opportunities and innovation
         </p>
         <a href="#open-roles">
@@ -179,7 +179,7 @@ export default function CareerPage() {
       <section className="py-16 bg-cover bg-center" style={{ backgroundImage: 'url("/images/bg image.png")' }}>
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="mb-12">
-            <p className="text-sm font-semibold text-[#0B6E99] uppercase tracking-wide">WHAT WE OFFER YOU</p>
+            <p className="text-sm font-semibold text-[#006D9F] uppercase tracking-wide">WHAT WE OFFER YOU</p>
             <h3 className="text-4xl font-bold mt-2 text-black">
               JOB <span className="text-[#0B6E99]">BENEFITS</span> YOU WILL APPRECIATE
             </h3>
@@ -222,9 +222,9 @@ export default function CareerPage() {
             {/* Left Column - Contact Info */}
             <div className="space-y-6">
               <div className="mb-6">
-                <p className="text-sm font-semibold text-[#0B6E99] uppercase">OUR CONTACTS</p>
+                <p className="text-sm font-semibold text-[#006D9F] uppercase">OUR CONTACTS</p>
                 <h3 className="text-4xl font-bold mt-2">
-                  GET IN TOUCH <span className="text-[#0B6E99]">WITH US!</span>
+                  GET IN TOUCH <span className="text-[#006D9F]">WITH US!</span>
                 </h3>
               </div>
 
@@ -237,7 +237,7 @@ export default function CareerPage() {
                 <p className="font-medium mb-2">DON'T WANT TO WAIT? CALL US NOW!</p>
                 <div className="flex items-center">
                   <Image src="/images/career/Phone Icon.png" alt="Phone" width={16} height={16} className="mr-2" />
-                  <span className="text-gray-700">+91 8073450249 INDIA</span>
+                  <span className="text-black">+91 8073450249 INDIA</span>
                 </div>
               </div>
 
@@ -245,7 +245,7 @@ export default function CareerPage() {
                 <p className="font-medium mb-2">THE INTERESTED CANDIDATES CAN DROP THEIR RESUME TO</p>
                 <div className="flex items-center">
                   <Image src="/images/career/message.png" alt="Email" width={16} height={16} className="mr-2" />
-                  <span className="text-[#0B6E99] font-medium">support@aow.co.in</span>
+                  <span className="text-[#006D9F] font-medium">support@aow.co.in</span>
                 </div>
               </div>
 
@@ -283,7 +283,7 @@ export default function CareerPage() {
 
             {/* Right Column - Contact Form */}
             <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6">
-              <h3 className="text-[#0B6E99] font-medium mb-6 text-center">
+              <h3 className="text-[#006D9F] font-medium mb-6 text-center">
                 WE ARE EXCITED TO LEARN MORE ABOUT YOU AND YOUR EXPERIENCE
               </h3>
 
@@ -302,7 +302,7 @@ export default function CareerPage() {
                 </div>
 
                 <div>
-                  <label className="text-sm text-gray-600 mb-1 block">Email*</label>
+                  <label className="text-sm text-black mb-1 block">Email*</label>
                   <input
                     name="email"
                     type="email"
@@ -316,7 +316,7 @@ export default function CareerPage() {
 
                 <div>
                   <div className="flex items-center mb-2">
-                    <span className="text-sm text-gray-600 mr-2">Attach your CV</span>
+                    <span className="text-sm text-black mr-2">Attach your CV</span>
                     <div className="w-5 h-5 flex items-center justify-center text-white">
                       <span className="text-white text-xs">
                         <img src="/images/footer/load file.png" alt="Upload" />
@@ -328,7 +328,7 @@ export default function CareerPage() {
                 <div className="flex justify-end">
                   <button
                     type="submit"
-                    className="bg-[#0B6E99] hover:bg-[#095b7f] text-white py-2 px-4 rounded-xl text-sm font-medium transition-colors"
+                    className="bg-[#006D9F] hover:bg-[#095b7f] text-white py-2 px-4 rounded-xl text-sm font-medium transition-colors"
                   >
                     Next
                   </button>
