@@ -21,7 +21,7 @@ const ServiceBlock: React.FC<ServiceBlockProps> = ({
 
   const handleSeeMore = () => {
     if (title === "App Development") {
-      router.push("/sub-services/service-v1")
+      router.push("/sub-services/service-v")
     }
   }
 

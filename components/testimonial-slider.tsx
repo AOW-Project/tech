@@ -10,14 +10,14 @@ const testimonialSets = [
         "We absolutely loved working with the team! The Skill Koala site turned out even better than we imagined — fun, modern, and super engaging. Huge thanks for bringing our vision to life! The UI is clean, and the UX is intuitive — exactly what we needed for interactive learning.",
       name: "Alice Rosenberg",
       title: "co-owner",
-      logo: "/images/Author image.png",
+      logo: "/images/Authorimage.png",
     },
     {
       quote:
         "We're very pleased with the website the team developed for Autorepair. It's clean, fast, and makes it easy for customers to find the parts they need. The user experience is smooth, and the backend is simple to manage. Excellent work and reliable communication throughout the project!",
       name: "John Carter",
       title: "Project Manager",
-      logo: "/images/Author image.png",
+      logo: "/images/Authorimage.png",
     },
   ],
   [
@@ -26,14 +26,14 @@ const testimonialSets = [
         "The team delivered an exceptional e-commerce platform that exceeded our expectations. Sales have increased by 40% since launch, and customer feedback has been overwhelmingly positive about the intuitive shopping experience.",
       name: "Sarah Johnson",
       title: "Marketing Director",
-      logo: "/images/Author image.png",
+      logo: "/images/Authorimage.png",
     },
     {
       quote:
         "Working with this team transformed our outdated website into a modern, responsive platform. Their attention to detail and understanding of our brand was impressive. The new site has significantly improved our conversion rates.",
       name: "Michael Chen",
       title: "CEO, TechSolutions",
-      logo: "/images/Author image.png",
+      logo: "/images/Authorimage.png",
     },
   ],
   [
@@ -42,14 +42,14 @@ const testimonialSets = [
         "The mobile app they developed for our healthcare service has streamlined patient communication and appointment scheduling. The interface is clean, accessible, and our staff required minimal training to use it effectively.",
       name: "Dr. Emily Rodriguez",
       title: "Medical Director",
-      logo: "/images/Author image.png",
+      logo: "/images/Authorimage.png",
     },
     {
       quote:
         "Our startup needed a distinctive brand identity and website to stand out in a competitive market. The team delivered a comprehensive solution that perfectly captured our vision while ensuring excellent user experience.",
       name: "David Park",
       title: "Founder, InnovateTech",
-      logo: "/images/Author image.png",
+      logo: "/images/Authorimage.png",
     },
   ],
 ]
