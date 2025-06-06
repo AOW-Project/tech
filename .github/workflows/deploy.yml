@@ -34,14 +34,14 @@ jobs:
       # Disable strict host checking (optional but convenient)
       - name: Add EC2 host to known_hosts
         run: |
-          ssh-keyscan -H 3.89.127.136 >> ~/.ssh/known_hosts
+          ssh-keyscan -H ec2-3-89-127-136.compute-1.amazonaws.com >> ~/.ssh/known_hosts
 
       # RSYNC or SSH commands to remote
       - name: Deploy to EC2 over SSH
         env:
           NODE_ENV: production
         run: |
-          ssh -i ~/.ssh/id_rsa ubuntu@3.89.127.136 << 'EOF'
+          ssh -i ~/.ssh/id_rsa ubuntu@ec2-3-89-127-136.compute-1.amazonaws.com << 'EOF'
             set -e
 
             cd /home/ubuntu/tech || exit 1
