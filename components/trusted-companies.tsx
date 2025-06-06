@@ -11,16 +11,11 @@ const trustedCompanies = [
 export default function TrustedCompanies() {
   return (
     <section className=" bg-gray-50"> {/* Reduced top padding */}
-      <div className="container mx-auto px-2 md:px-6">
+      <div className="container mx-auto px-2 md:px-6 w-[1920px] h-[148px]">
         {/* Optional heading */}
-        <div className="text-center mb-6">
-          <p className="text-black text-lg md:text-xl font-bold uppercase tracking-wider">
-            Trusted by leading companies worldwide
-          </p>
-        </div>
-
+      
         {/* Logo row - evenly distributed across the width with more spacing */}
-        <div className="flex justify-between items-center max-w-6xl mx-auto">
+        <div className="flex justify-between items-center max-w-6xl mx-auto w-[2000px] h-[100px]">
           {trustedCompanies.map((company, index) => (
             <div key={index} className="flex items-center justify-center transition-all duration-300 hover:scale-105">
               <Image

@@ -20,16 +20,48 @@ export default function Header() {
             <button className="flex items-center text-sm font-medium hover:text-[#00647D] transition-colors">
               Tech <ChevronDown size={14} className="ml-1" />
             </button>
-            <div className="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded-md p-2 min-w-[150px]">
-              <Link href="/tech/web" className="block px-3 py-1 text-sm hover:bg-gray-100">
-                Web
-              </Link>
-              <Link href="/tech/mobile" className="block px-3 py-1 text-sm hover:bg-gray-100">
-                Mobile
-              </Link>
+            {/* Tech Dropdown Content - Updated to match image_c64217.png*/}
+            <div className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md p-6 min-w-[750px] left-1/2 transform -translate-x-1/2"> {/* Increased padding, min-width, and centered positioning */}
+              <div className="grid grid-cols-3 gap-x-10"> {/* Three-column layout with gap */}
+
+                {/* Column 1: APP DEVELOPMENT */}
+                <div className="flex flex-col space-y-2 pr-4 border-r border-gray-200"> {/* Added border-r for separator */}
+                  <h4 className="text-sm font-bold uppercase text-black mb-2">APP DEVELOPMENT</h4>
+                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">Custom App Development</Link>
+                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">E-commerce Apps</Link>
+                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">UI/UX Design</Link>
+                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">Maintenance & Updates</Link>
+                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">Progressive Web Apps (PWAs)</Link>
+                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">API Integration</Link>
+                </div>
+
+                {/* Column 2: WEB DEVELOPMENT */}
+                <div className="flex flex-col space-y-2 px-4 border-r border-gray-200"> {/* Added border-r for separator */}
+                  <h4 className="text-sm font-bold uppercase text-black mb-2">WEB DEVELOPMENT</h4>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Custom Website Development</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">E-commerce Development</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Web Application Development</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">CMS Development</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Third-party Integrations</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Website Maintenance</Link>
+                </div>
+
+                {/* Column 3: CUSTOMER SUPPORT */}
+                <div className="flex flex-col space-y-2 pl-4">
+                  <h4 className="text-sm font-bold uppercase text-black mb-2">CUSTOMER SUPPORT</h4>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Live Chat Support</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Email Support</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Call Center Services</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Technical Support</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">24/7 Customer Service</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Multilingual Support</Link>
+                </div>
+
+              </div>
             </div>
           </div>
 
+          {/* Digital Dropdown (remains unchanged) */}
           <div className="relative group">
             <button className="flex items-center text-sm font-medium hover:text-[#00647D] transition-colors">
               Digital <ChevronDown size={14} className="ml-1" />
@@ -44,6 +76,7 @@ export default function Header() {
             </div>
           </div>
 
+          {/* Content Dropdown (remains unchanged) */}
           <div className="relative group">
             <button className="flex items-center text-sm font-medium hover:text-[#00647D] transition-colors">
               Content <ChevronDown size={14} className="ml-1" />

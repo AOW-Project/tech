@@ -60,7 +60,7 @@ const Portfolio = () => {
           {portfolioItems.map((item, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden rounded-2xl shadow-lg bg-white"
+              className="relative group overflow-hidden rounded-2xl shadow-lg"
               onMouseEnter={() => setActiveIndex(index)}
             >
               <div className="w-full">

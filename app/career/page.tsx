@@ -176,7 +176,7 @@ export default function CareerPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-cover bg-center" style={{ backgroundImage: 'url("/images/bg image.png")' }}>
+      <section className="py-16 bg-cover bg-center font-inter" style={{ backgroundImage: 'url("/images/bg image.png")' }}>
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="mb-12">
             <p className="text-sm font-semibold text-[#006D9F] uppercase tracking-wide">WHAT WE OFFER YOU</p>
@@ -216,7 +216,7 @@ export default function CareerPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white font-inter">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left Column - Contact Info */}
@@ -228,7 +228,7 @@ export default function CareerPage() {
                 </h3>
               </div>
 
-              <p className="text-gray-700">
+              <p className="text-black">
                 If an individual is passionate about Technology and Innovation, AOW INFORMATION TECHNOLOGY's mission is
                 to diligently serve clients and look for like-minded people who align with our criteria.
               </p>
@@ -237,7 +237,7 @@ export default function CareerPage() {
                 <p className="font-medium mb-2">DON'T WANT TO WAIT? CALL US NOW!</p>
                 <div className="flex items-center">
                   <Image src="/images/career/Phone Icon.png" alt="Phone" width={16} height={16} className="mr-2" />
-                  <span className="text-black">+91 8073450249 INDIA</span>
+                  <span className="text-black">+91 8073450249     INDIA</span>
                 </div>
               </div>
 
@@ -282,14 +282,14 @@ export default function CareerPage() {
             </div>
 
             {/* Right Column - Contact Form */}
-            <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6">
+            <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 font-inter">
               <h3 className="text-[#006D9F] font-medium mb-6 text-center">
                 WE ARE EXCITED TO LEARN MORE ABOUT YOU AND YOUR EXPERIENCE
               </h3>
 
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="text-sm text-gray-600 mb-1 block">Name*</label>
+                  <label className="text-sm text-black mb-1 block">Name*</label>
                   <input
                     name="name"
                     type="text"
@@ -317,8 +317,8 @@ export default function CareerPage() {
                 <div>
                   <div className="flex items-center mb-2">
                     <span className="text-sm text-black mr-2">Attach your CV</span>
-                    <div className="w-5 h-5 flex items-center justify-center text-white">
-                      <span className="text-white text-xs">
+                    <div className="w-5 h-5 flex items-center justify-center text-black">
+                      <span className="text-black text-xs">
                         <img src="/images/footer/load file.png" alt="Upload" />
                       </span>
                     </div>

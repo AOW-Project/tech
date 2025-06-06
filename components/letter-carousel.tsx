@@ -13,7 +13,7 @@ const slides = [
     description:
       "Partnering with us for end-to-end mobile app development is easier. From concept to execution, we are aligned with your vision in building impactful applications that reach the right users to drive success.",
     features: ["Cross-Platform", "Scalable Solutions", "User-Centric Design", "Performance Optimized"],
-    image: "/images/home page/1.jpg",
+    image: "/images/home page/1.png",
     service: "Mobile App Development",
   },
   {
@@ -35,7 +35,7 @@ const slides = [
     description:
       "Partnering with us for comprehensive UI/UX design services is easier. From wireframes to execution, we are aligned with your vision in building impactful designs that reach the right users to drive engagement.",
     features: ["User Research", "Intuitive Interfaces", "Design Systems", "Accessibility Focus"],
-    image: "/images/home page/slide11.png",
+    image: "/images/home page/3.png",
     service: "UI/UX Design Services",
   },
   {
