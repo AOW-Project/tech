@@ -16,7 +16,7 @@ export default function ServiceV1Page() {
       iconImage: "/images/v1/1.png",
       title: "TAILORED TO YOUR BUSINESS",
       description:
-        "Your app is built from scratch to meet your exact business needs — not forced into a pre-made mold. Every detail reflects your goals, operations, and customer expectations.",
+        "Your app is built from scratch to meet your exact business needs — not forced into a pre-made mold. Every detail reflects your goals, operations, and customer expectations. ",
       bgColor: "bg-white",
     },
     {
