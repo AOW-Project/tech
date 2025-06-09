@@ -30,18 +30,35 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.AOWDESKTOP }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+      - name: debug resolve and keyscan EC2
+        run: |
+          echo "→ Resolving ${{ env.EC2_HOSTNAME }}"
+          nslookup "${{ env.EC2_HOSTNAME }}" || dig +short "${{ env.EC2_HOSTNAME }}"
+          echo
+
+          echo "→ Attempting ssh-keyscan -vH ${EC2_HOSTNAME}"
+          ssh-keyscan -vH "${{ env.EC2_HOSTNAME }}" > debug_known_hosts.txt 2>&1 || echo "ssh-keyscan exited with $?"
+          echo
+
+          echo "=== debug_known_hosts.txt content ==="
+          cat debug_known_hosts.txt
+          echo "=== end of debug_known_hosts.txt ==="
+          echo
+
+          echo "→ Checking if port 22 is reachable (this often hangs if SG blocks it)"
+          nc -zv "${{ env.EC2_HOSTNAME }}" 22 || echo "nc: port 22 unreachable or blocked"
 
       # Disable strict host checking (optional but convenient)
       - name: Add EC2 host to known_hosts
         run: |
-          ssh-keyscan -H 3.89.127.136 >> ~/.ssh/known_hosts
+          ssh-keyscan -H ec2-3-89-127-136.compute-1.amazonaws.com >> ~/.ssh/known_hosts
 
       # RSYNC or SSH commands to remote
       - name: Deploy to EC2 over SSH
         env:
           NODE_ENV: production
         run: |
-          ssh -i ~/.ssh/id_rsa ubuntu@3.89.127.136 << 'EOF'
+          ssh -i ~/.ssh/id_rsa ubuntu@ec2-3-89-127-136.compute-1.amazonaws.com << 'EOF'
             set -e
 
             cd /home/ubuntu/tech || exit 1

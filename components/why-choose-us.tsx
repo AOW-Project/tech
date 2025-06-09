@@ -3,15 +3,15 @@ import Image from "next/image";
 
 const WhyChooseUs: React.FC = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gray-50 font-inter">
+    <section className="py-12 md:py-16 lg:py-20 bg-gray-50 ">
       <div className="container mx-auto px-4 md:px-6">
         {/* Heading */}
-        <div className="flex items-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black">
-            WHY CHOOSE US? <br />
-            <span className="text-[#006D9F]">THE BEST EVER CHOICE</span>
-          </h2>
-        </div>
+        <div className="mb-8 text-left ">
+            <h2 className="text-sm font-semibold text-[#006D9F] uppercase tracking-wider mb-2">WHY CHOOSE US?</h2>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 uppercase">
+              THE BEST EVER CHOICE <span className="text-[#006D9F]">CHOICE</span>
+            </h3>
+          </div>
 
         {/* Main Content: Graph + Text */}
         <div className="flex flex-col lg:flex-row items-start gap-8">

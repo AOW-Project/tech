@@ -1,11 +1,14 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+
 import "./globals.css"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import { Inter, Nunito } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"] })
+// Load fonts with CSS variables for Tailwind
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" })
 
 export const metadata: Metadata = {
   title: "NOW UI/UX Design Agency",
@@ -25,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${inter.variable} ${nunito.variable}`}>
+      <body className="font-inter">
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-grow">{children}</main>
