@@ -143,7 +143,7 @@ const MainSection: React.FC = () => {
   }
 
   return (
-    <section className="relative w-full h-[820px]">
+    <section className="relative w-full h-[520px] md:h-auto">
       {/* Full Background Image */}
       <Image 
         src={HERO_IMAGE} 
@@ -154,27 +154,28 @@ const MainSection: React.FC = () => {
       />
 
       {/* White to Transparent Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white  via-white/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent z-10" />
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-screen-xl h-full mx-auto px-6">
-        <div className="flex flex-col md:flex-row h-full items-center">
-          {/* Left Side: Heading + Form */}
-          <div className="w-full md:w-1/3 flex flex-col justify-center">
-            <h1 className="text-3xl md:text-5xl font-bold text-black mb-8">
-              <span className="block text-[#1b8bf9]">SERVICES FOR YOUR</span>
-              <span className="block">BUSINESS</span>
-            </h1>
-            
-            {/* Form Container */}
-            <div className="bg-white rounded-xl shadow-lg max-w-[360px] w-full p-6">
-              <MultiStepForm />
-            </div>
+      <div className="relative z-20 w-full h-full flex flex-col lg:flex-row items-start px-4 md:px-10 lg:px-16 pt-6 pb-4 lg:gap-[40px]">
+        {/* Left Side: Heading + Form */}
+        <div className="w-full max-w-xl flex flex-col gap-3">
+          <h1 className="text-[40px] font-bold leading-snug mt-1 mb-1 font-nunito">
+            <span className="block">
+              <span className="text-[#1b8bf9]">SERVICES</span>
+              <span className="text-black"> FOR YOUR</span>
+            </span>
+            <span className="block text-black">BUSINESS</span>
+          </h1>
+          
+          {/* Form Container */}
+          <div className="border border-[#ADD8E6] rounded-md p-4 bg-white shadow-md flex flex-col gap-4 mt-3 w-full min-h-[400px]">
+            <MultiStepForm />
           </div>
-
-          {/* Right Side: Reserved space */}
-          <div className="w-full md:w-2/3 h-full"></div>
         </div>
+
+        {/* Right Side: Reserved space */}
+        <div className="hidden lg:block w-full lg:w-1/2 h-full flex items-center justify-center pointer-events-none"></div>
       </div>
     </section>
   )
