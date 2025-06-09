@@ -13,7 +13,7 @@ import ServiceBlock from "../../components/ServiceBlock"
 const SERVICES_DATA = [
   {
     title: "App Development",
-    imageSrc: "/images/ser/app.png",
+    imageSrc: "/images/about-services/app-dev.jpg",
     accordionItems: [
       { title: "Custom App Development", content: "Tailored mobile and web apps for your business needs." },
       { title: "E-commerce Apps", content: "Robust e-commerce solutions for seamless online sales." },
@@ -25,7 +25,7 @@ const SERVICES_DATA = [
   },
   {
     title: "Digital Marketing Services",
-    imageSrc: "/images/ser/digital.png",
+    imageSrc: "/images/about-services/digital-marketing.jpg",
     accordionItems: [
       { title: "Pay-Per-Click (PPC) Advertising", content: "Drive targeted traffic with optimized PPC campaigns." },
       { title: "Email Marketing", content: "Engage your audience with effective email strategies." },
@@ -37,7 +37,7 @@ const SERVICES_DATA = [
   },
   {
     title: "Web Development Services",
-    imageSrc: "/images/ser/web.png",
+    imageSrc: "/images/about-services/web-dev.jpg",
     accordionItems: [
       { title: "Custom Website Development", content: "Unique, scalable websites tailored to your brand." },
       { title: "E-commerce Development", content: "Secure, high-converting online stores." },
@@ -49,7 +49,7 @@ const SERVICES_DATA = [
   },
   {
     title: "Social Media Marketing",
-    imageSrc: "/images/ser/social media.png",
+    imageSrc: "/images/about-services/social-media-marketing.jpg",
     accordionItems: [
       { title: "Social Media Strategy", content: "Custom strategies to grow your online presence." },
       { title: "Content Creation", content: "Engaging posts and campaigns for your brand." },
@@ -62,7 +62,7 @@ const SERVICES_DATA = [
   },
   {
     title: "Web Designing Services",
-    imageSrc: "/images/ser/design.png",
+    imageSrc: "/images/about-services/web-designing-services.jpg",
     accordionItems: [
       { title: "UI/UX Design", content: "Intuitive, visually appealing designs." },
       { title: "Responsive Design", content: "Seamless experience on all devices." },
@@ -74,7 +74,7 @@ const SERVICES_DATA = [
   },
   {
     title: "SEO Services",
-    imageSrc: "/images/ser/seo.png",
+    imageSrc: "/images/about-services/seo-services.jpg",
     accordionItems: [
       { title: "On-Page SEO", content: "Optimize content and structure for search engines." },
       { title: "Off-Page SEO", content: "Build authority with quality backlinks." },
@@ -86,7 +86,7 @@ const SERVICES_DATA = [
   },
   {
     title: "Customer Support Services",
-    imageSrc: "/images/ser/customer.png",
+    imageSrc: "/images/about-services/customer-support.jpg",
     accordionItems: [
       { title: "Live Chat Support", content: "Instant help for your customers online." },
       { title: "Email Support", content: "Efficient, professional email responses." },
@@ -98,7 +98,7 @@ const SERVICES_DATA = [
   },
   {
     title: "Social Media Poster Design",
-    imageSrc: "/images/ser/media.png",
+    imageSrc: "/images/about-services/social-media.png",
     accordionItems: [
       { title: "Custom Templates", content: "Branded templates for consistent visuals." },
       { title: "Event Posters", content: "Eye-catching designs for special events." },
@@ -110,7 +110,7 @@ const SERVICES_DATA = [
   },
   {
     title: "Logo Designing Services",
-    imageSrc: "/images/ser/logo design.png",
+    imageSrc: "/images/about-services/logo-design.jpg",
     accordionItems: [
       { title: "Logo Designing", content: "Unique, memorable logos for your brand." },
       { title: "Stationery Designing", content: "Professional business cards, letterheads, and more." },

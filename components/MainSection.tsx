@@ -143,7 +143,7 @@ const MainSection: React.FC = () => {
   }
 
   return (
-    <section className="min-h-screen relative">
+    <section className="relative w-full h-[820px]">
       {/* Full Background Image */}
       <Image 
         src={HERO_IMAGE} 
@@ -154,20 +154,26 @@ const MainSection: React.FC = () => {
       />
 
       {/* White to Transparent Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-white/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white  via-white/70 to-transparent" />
 
       {/* Content Container */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row gap-8 min-h-screen items-center">
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h1 className="text-3xl md:text-5xl font-bold text-black mb-8 ml-12">
-              <span className="text-[#1b8bf9]">SERVICES</span> FOR YOUR BUSINESS
+      <div className="relative z-10 max-w-screen-xl h-full mx-auto px-6">
+        <div className="flex flex-col md:flex-row h-full items-center">
+          {/* Left Side: Heading + Form */}
+          <div className="w-full md:w-1/3 flex flex-col justify-center">
+            <h1 className="text-3xl md:text-5xl font-bold text-black mb-8">
+              <span className="block text-[#1b8bf9]">SERVICES FOR YOUR</span>
+              <span className="block">BUSINESS</span>
             </h1>
-            <MultiStepForm />
+            
+            {/* Form Container */}
+            <div className="bg-white rounded-xl shadow-lg max-w-[360px] w-full p-6">
+              <MultiStepForm />
+            </div>
           </div>
-          <div className="w-full md:w-2/3 flex justify-center h-full">
-            {/* Remove the Image component here since we're using it as background */}
-          </div>
+
+          {/* Right Side: Reserved space */}
+          <div className="w-full md:w-2/3 h-full"></div>
         </div>
       </div>
     </section>

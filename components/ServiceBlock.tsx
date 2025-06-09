@@ -32,13 +32,13 @@ const ServiceBlock: React.FC<ServiceBlockProps> = ({
       } items-start gap-8`}
     >
       {/* Image */}
-      <div className="w-full md:w-1/2 flex-shrink-0 flex items-start">
+      <div className="w-full md:w-1/2 flex-shrink-0 flex items-start group">
         <Image
           src={imageSrc}
           alt={`${title} illustration`}
           width={400}
           height={400}
-          className="w-full h-[320px] md:h-[400px] object-cover rounded-lg shadow-md aspect-square"
+          className="w-full h-[320px] md:h-[400px] object-cover rounded-lg shadow-md aspect-square transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 

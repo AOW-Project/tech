@@ -243,15 +243,15 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full border border-[#1b8bf9] rounded-sm p-6 ml-12">
+    <form onSubmit={handleSubmit} className="w-full">
       {/* Stepper Component */}
       <div className="flex justify-between mb-6">
         {[...Array(totalSteps)].map((_, index) => (
           <div
             key={index}
             className={`w-1/3 h-2 rounded-full ${currentStep > index ? 'bg-[#1b8bf9]' : 'bg-gray-300'}`}
-             onClick={() => setCurrentStep(index + 1)} // Allow jumping between steps
-             style={{ cursor: 'pointer' }}
+            onClick={() => setCurrentStep(index + 1)}
+            style={{ cursor: 'pointer' }}
           ></div>
         ))}
       </div>
