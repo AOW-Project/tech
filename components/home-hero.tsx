@@ -120,8 +120,8 @@ export default function HomeHero() {
             )}
           </h1>
 
-          <p className="text-sm text-gray-700 mb-5 leading-relaxed max-w-[90%]">{current.description}</p>
-
+          <p className="text-sm text-[#000000] font-inter mb-5 leading-relaxed max-w-[90%] font-medium">{current.description}</p>
+            
           {/* Features with tick marks */}
           <div className="grid grid-cols-2 gap-x-3 gap-y-2 mb-5">
             {current.features.map((feature, index) => (
@@ -131,7 +131,7 @@ export default function HomeHero() {
                   alt="tick mark"
                   className="w-4 h-4 flex-shrink-0"
                 />
-                <span className="text-xs text-gray-800">{feature}</span>
+                <span className="text-xs text-[#000000] font-inter font-medium">{feature}</span>
               </div>
             ))}
           </div>
