@@ -118,7 +118,7 @@ export const SERVICES = [
   }
 ]
 
-const HERO_IMAGE = "/images/services/hero-img-mainSection.jpg" // Updated hero image path
+const HERO_IMAGE = "/images/about-services/Hero-section-imgg.png" // Updated hero image path
 
 const MainSection: React.FC = () => {
   const [serviceIdx, setServiceIdx] = useState(0)
@@ -143,39 +143,41 @@ const MainSection: React.FC = () => {
   }
 
   return (
-    <section className="relative w-full h-[520px] md:h-auto">
+    <section className="relative w-full h-[720px] md:h-auto overflow-hidden">
       {/* Full Background Image */}
-      <Image 
-        src={HERO_IMAGE} 
-        alt="Business services hero banner" 
-        fill 
-        className="object-cover" 
-        priority 
-      />
-
-      {/* White to Transparent Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent z-10" />
+      <div className="absolute inset-0 w-full h-full">
+        <Image 
+          src={HERO_IMAGE} 
+          alt="Business services hero banner" 
+          fill 
+          className="object-cover" 
+          priority 
+          sizes="100vw"
+          style={{ objectPosition: 'top center' }}
+          // style={{ objectPosition: 'center right' }}
+        />
+      </div>
 
       {/* Content Container */}
-      <div className="relative z-20 w-full h-full flex flex-col lg:flex-row items-start px-4 md:px-10 lg:px-16 pt-6 pb-4 lg:gap-[40px]">
+      <div className="relative z-20 container mx-auto h-full flex flex-col lg:flex-row items-start px-4 md:px-10 lg:px-16 pt-6 pb-4 lg:gap-[40px] lg:ml-[4.8%]">
         {/* Left Side: Heading + Form */}
-        <div className="w-full max-w-xl flex flex-col gap-3">
-          <h1 className="text-[40px] font-bold leading-snug mt-1 mb-1 font-nunito">
+        <div className="w-full lg:w-[45%] flex flex-col gap-3">
+          <h1 className="text-[40px] font-extrabold leading-snug mt-12 font-nunito">
             <span className="block">
-              <span className="text-[#1b8bf9]">SERVICES</span>
+              <span className="text-[#006D9F]">SERVICES</span>
               <span className="text-black"> FOR YOUR</span>
             </span>
             <span className="block text-black">BUSINESS</span>
           </h1>
           
           {/* Form Container */}
-          <div className="border border-[#ADD8E6] rounded-md p-4 bg-white shadow-md flex flex-col gap-4 mt-3 w-full min-h-[400px]">
+          <div className="border border-[#ADD8E6] rounded-md p-4 flex flex-col gap-4 mt-1 mb-20 w-full min-h-[287px]">
             <MultiStepForm />
           </div>
         </div>
 
         {/* Right Side: Reserved space */}
-        <div className="hidden lg:block w-full lg:w-1/2 h-full flex items-center justify-center pointer-events-none"></div>
+        <div className="hidden lg:block w-full lg:w-[55%] h-full"></div>
       </div>
     </section>
   )

@@ -124,9 +124,15 @@ export default function AboutServicesPage() {
       <MainSection />
       <div className="container mx-auto px-4 mt-12">
         {/* Section Header for all ServiceBlocks */}
-        <div className="mb-10 mx-2 md:mx-8 lg:mx-16">
-          <div className="text-xs font-semibold text-[#1b8bf9] uppercase mb-1 tracking-wider">Innovative Digital Solution</div>
-          <h2 className="text-2xl md:text-3xl font-bold text-black mb-2">Comprehensive Digital Solution for Your Business Growth</h2>
+        <div className="mb-10 mx-2 md:mx-8 lg:mx-16 lg:pl-[58px]">
+          <div className="text-xs font-extrabold font-nunito text-[#006D9F] uppercase mb-1 tracking-wider">Innovative Digital Solutions</div>
+          <h2 className="text-2xl font-extrabold md:text-3xl font-nunito mb-2">
+            <span className="text-black">COMPREHENSIVE</span>{" "}
+            <span className="text-[#006D9F]">DIGITAL SOLUTION</span>{" "}
+            <span className="text-black">FOR YOUR</span>
+            <br />
+            <span className="text-black">BUSINESS GROWTH</span>
+          </h2>
         </div>
         {/* Service Blocks in zig-zag layout: reverse={idx % 2 === 1} */}
         <div className="mx-2 md:mx-8 lg:mx-16">

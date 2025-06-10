@@ -58,18 +58,18 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
     switch (currentStep) {
       case 1:
         return (
-          <div className="h-[400px] flex flex-col justify-between">
-            <div className="space-y-4">
-              <h2 className="text-black text-lg font-semibold">Let's create something Extraordinary together!!!</h2>
-              <h3 className="text-[#1b8bf9] text-lg font-semibold">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
+          <div className="h-[220px] flex flex-col justify-between">
+            <div className="space-y-2">
+              <h2 className="text-black text-base font-nunito">LET'S CREATE SOMETHING EXTRAORDINARY TOGETHER!</h2>
+              <h3 className="text-[#1b8bf9] text-sm font-semibold">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
               <div>
                 <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Services
+                  Services*
                 </label>
                 <select
                   id="service"
                   name="service"
-                  className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                   value={serviceIdx}
                   onChange={handleServiceChange}
                   required
@@ -84,12 +84,12 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
               </div>
               <div>
                 <label htmlFor="subservice" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Subservices
+                  Subservices*
                 </label>
                 <select
                   id="subservice"
                   name="subservice"
-                  className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                   value={subIdx}
                   onChange={handleSubChange}
                   required
@@ -103,11 +103,11 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
                 </select>
               </div>
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-end mt-4">
               <button
                 type="button"
                 onClick={handleNext}
-                className="w-auto px-8 py-2 bg-[#084C6B] text-white rounded-full font-semibold text-base hover:bg-[#053449] transition-colors"
+                className="w-[180px] px-8 py-2 bg-[#084C6B] text-white rounded-full font-semibold text-base hover:bg-[#053449] transition-colors active:scale-95"
               >
                 Next
               </button>
@@ -116,9 +116,9 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
         );
       case 2:
         return (
-          <div className="h-[400px] flex flex-col justify-between">
-            <div className="space-y-4">
-              <h2 className="text-[#1b8bf9] text-lg font-bold">GOT A VISION OR IDEA? LETS TURN IT INTO REALITY</h2>
+          <div className="h-[220px] flex flex-col justify-between">
+            <div className="space-y-0.2">
+              <h2 className="text-[#1b8bf9] text-sm font-semibold">GOT A VISION OR IDEA? LETS TURN IT INTO REALITY</h2>
               <div>
                 <label htmlFor="projectDescription" className="block text-sm font-semibold text-gray-700 mb-1">
                   Describe your project
@@ -127,7 +127,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
                   type="text"
                   id="projectDescription"
                   name="projectDescription"
-                  className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                   value={formData.projectDescription || ''}
                   onChange={(e) => setFormData({ ...formData, projectDescription: e.target.value })}
                   required
@@ -141,30 +141,30 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
                   type="text"
                   id="currentIssues"
                   name="currentIssues"
-                  className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                   value={formData.currentIssues || ''}
                   onChange={(e) => setFormData({ ...formData, currentIssues: e.target.value })}
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">
-                  Drop a file
+                <label className="block text-sm font-semibold text-gray-600 mb-1">
+                 
                 </label>
                 <div className="flex items-center">
                   <input type="file" id="fileUpload" className="hidden" onChange={(e) => setFormData({ ...formData, file: e.target.files ? e.target.files[0] : null })} />
                   <label htmlFor="fileUpload" className="cursor-pointer flex items-center">
                     <img src="/images/footer/load%20file.png" alt="Upload file icon" className="w-6 h-6 mr-2" />
-                    <span className="text-gray-700">Drop a file</span>
+                    <span className="text-[#084C6B]">Drop a file</span>
                   </label>
                   {formData.file && <span className="ml-2 text-sm text-gray-600">{formData.file.name}</span>}
                 </div>
               </div>
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-end mt-4">
               <button
                 type="button"
                 onClick={handleNext}
-                className="w-auto px-8 py-2 bg-[#084C6B] text-white rounded-full font-semibold text-base hover:bg-[#053449] transition-colors"
+                className="w-[180px] px-8 py-2 bg-[#084C6B] text-white rounded-full font-semibold text-base hover:bg-[#053449] transition-colors"
               >
                 Next
               </button>
@@ -173,10 +173,10 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
         );
       case 3:
         return (
-          <div className="h-[320px] flex flex-col justify-between">
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-gray-800">Let's connect!</h2>
-              <div className="grid grid-cols-2 gap-4">
+          <div className="h-[220px] flex flex-col justify-between">
+            <div className="space-y-2">
+              <h2 className="text-sm font-semibold text-[#1b8bf9]">LET'S CONNECT!</h2>
+              <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">
                     Name
@@ -185,7 +185,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                    className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                     value={formData.name || ''}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
@@ -199,7 +199,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                    className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                     value={formData.phone || ''}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     required
@@ -213,7 +213,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                    className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                     value={formData.email || ''}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
@@ -227,17 +227,17 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
                     type="text"
                     id="company"
                     name="company"
-                    className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                    className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                     value={formData.company || ''}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                   />
                 </div>
               </div>
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-end mt-4">
               <button
                 type="submit"
-                className="w-auto px-8 py-2 bg-[#084C6B] text-white rounded-full font-semibold text-base hover:bg-[#053449] transition-colors"
+                className="w-[180px] px-8 py-2 bg-[#084C6B] text-white rounded-full font-semibold text-base hover:bg-[#053449] transition-colors"
               >
                 Submit
               </button>
