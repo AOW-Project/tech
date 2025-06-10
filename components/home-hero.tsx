@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import MultiStepForm from './MultiStepForm'
+import { ChevronLeft, ChevronRight, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
+import MultiStepForm from "./MultiStepForm"
+// import Hero-form from './Hero-from'
 
 // Service slides data
 const slides = [
@@ -142,25 +143,28 @@ export default function HomeHero() {
           </div>
 
           {/* Bottom Navigation */}
-          <div className="flex justify-between items-center text-xs text-[#006D9F] font-inter">
-            <span className="cursor-pointer hover:underline">View service ↗</span>
-            <div className="flex items-center gap-3">
-              <span className="text-gray-500">
-                {String(currentSlide + 1).padStart(2, "0")}/{String(slides.length).padStart(2, "0")}
+          <div className="flex justify-between items-center">
+            <span className="cursor-pointer hover:underline text-base text-[#006D9F] font-inter flex items-center gap-1">
+              View service <ArrowUpRight className="w-6 h-6" />
+            </span>
+            <div className="flex items-center gap-2 font-aldrich">
+              <button onClick={prevSlide} className="p-1 hover:bg-blue-100 rounded transition-colors">
+                <ArrowLeft className="w-4 h-4 text-[#A7BDCB]" />
+              </button>
+              <span className="text-[24px] text-[#006D9F] font-aldrich uppercase font-normal leading-[120%]">
+                {String(currentSlide + 1).padStart(2, "0")}
               </span>
-              <div className="flex items-center gap-1">
-                <button onClick={prevSlide} className="p-1 hover:bg-blue-100 rounded transition-colors">
-                  <ChevronLeft className="w-3 h-3 text-[#006D9F]" />
-                </button>
-                <button onClick={nextSlide} className="p-1 hover:bg-blue-100 rounded transition-colors">
-                  <ChevronRight className="w-3 h-3 text-[#006D9F]" />
-                </button>
-              </div>
+              <span className="w-[26px] h-[29px] text-[16px] text-[#A7BDCB] font-aldrich">
+                /{String(slides.length).padStart(2, "0")}
+              </span>
+              <button onClick={nextSlide} className="p-1 hover:bg-blue-100 rounded transition-colors">
+                <ArrowRight className="w-6 h-6 text-[#006D9F]" />
+              </button>
             </div>
           </div>
 
           {/* Slide Indicators */}
-          <div className="flex gap-1.5 mt-3">
+          {/* <div className="flex gap-1.5 mt-3">
             {slides.map((_, index) => (
               <button
                 key={index}
@@ -170,7 +174,7 @@ export default function HomeHero() {
                 }`}
               />
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Right Side: Reserved space */}
