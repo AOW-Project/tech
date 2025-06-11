@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import MultiStepForm from "@/components/MultiStepForm";
 
 const accordionItems = [
   {
@@ -53,12 +54,12 @@ export default function ServiceV1Page() {
 
         <div className="relative z-20 w-full h-full flex flex-col lg:flex-row items-start px-4 md:px-10 lg:px-16 pt-6 pb-4 lg:gap-[40px]">
           <div className="w-full max-w-xl flex flex-col gap-3">
-            <h2 className="text-[26px] font-bold leading-snug mt-1 mb-1">
+            <h2 className="text-[45px] font-nunito font-extrabold leading-snug mt-7 ">
               <span className="text-[#007CC2]">APP </span>
               <span className="text-black">DEVELOPMENT</span>
             </h2>
 
-            <p className="text-[13.5px] text-black leading-normal mb-2">
+            <p className="text-sm text-[#000000] font-inter leading-normal font-medium ">
               Our user-friendly and scalable apps are designed to provide a
               seamless experience. From ideation to launch, we build
               high-performing mobile-friendly platforms for all your business
@@ -85,52 +86,10 @@ export default function ServiceV1Page() {
               ))}
             </div>
 
-            <div className="border border-[#ADD8E6] rounded-md p-4 bg-white shadow-md flex flex-col gap-4 mt-3 w-full">
-              <div className="flex justify-between w-full">
-                <div className="h-[2px] w-1/3 bg-[#007CC2]"></div>
-                <div className="h-[2px] w-1/3 bg-gray-300 mx-1"></div>
-                <div className="h-[2px] w-1/3 bg-gray-300"></div>
-              </div>
-
-              <div>
-                <p className="text-[13px] font-semibold text-black">
-                  LET’S CREATE SOMETHING EXTRAORDINARY TOGETHER!
-                </p>
-                <p className="text-[13px] text-[#007CC2] font-semibold uppercase mt-1">
-                  YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <div>
-                  <label
-                    htmlFor="services-select"
-                    className="block text-[13px] font-medium mb-1 text-black"
-                  >
-                    Services<span className="text-red-500">*</span>
-                  </label>
-                  <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-black">
-                    <option>App Development</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subservices-select"
-                    className="block text-[13px] font-medium mb-1 text-black"
-                  >
-                    Subservices<span className="text-red-500">*</span>
-                  </label>
-                  <select className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-black">
-                    <option>Choose subservice...</option>
-                  </select>
-                </div>
-
-                <button className="bg-[#004C78] hover:bg-[#003B60] text-white px-6 py-2 rounded text-sm w-fit self-start transition duration-200">
-                  Next
-                </button>
-              </div>
+            <div className="border border-[#006D9F] rounded-xl p-4 flex flex-col gap-4 mt-1 mb-20 w-full min-h-[293px]">
+              <MultiStepForm />
             </div>
+
           </div>
 
           <div className="hidden lg:block w-full lg:w-1/2 h-full flex items-center justify-center pointer-events-none">

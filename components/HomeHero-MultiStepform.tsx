@@ -58,14 +58,12 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
     switch (currentStep) {
       case 1:
         return (
-          <div className="h-[220px] flex flex-col justify-between">
+          <div className="h-[180px] flex flex-col justify-between">
             <div className="space-y-2">
-              <h2 className="text-black text-base font-nunito">LET'S CREATE SOMETHING EXTRAORDINARY TOGETHER!</h2>
-              <h3 className="text-[#1b8bf9] text-sm font-semibold">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
+              <h2 className="text-[#000000] text-base font-inter font-weight: 500 mb-2">LET'S CREATE SOMETHING EXTRAORDINARY TOGETHER!</h2>
+              <h3 className="mb-4 text-[#084C6B] text-sm font-semibold">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
               <div>
-                <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Services*
-                </label>
+                <label htmlFor="service" className="block text-base font-weight: 500 font-inter text-[gray-700] mb-1">Services*</label>
                 <select
                   id="service"
                   name="service"
@@ -82,28 +80,8 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
                   ))}
                 </select>
               </div>
-              <div>
-                <label htmlFor="subservice" className="block text-sm font-semibold text-gray-700 mb-1">
-                  Subservices*
-                </label>
-                <select
-                  id="subservice"
-                  name="subservice"
-                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
-                  value={subIdx}
-                  onChange={handleSubChange}
-                  required
-                >
-                  <option value="">Select a Subservice</option>
-                  {SERVICES[serviceIdx]?.sub.map((sub, idx) => (
-                    <option value={idx} key={sub}>
-                      {sub}
-                    </option>
-                  ))}
-                </select>
-              </div>
             </div>
-            <div className="flex justify-end mt-4">
+            <div className="flex justify-end mb-1">
               <button
                 type="button"
                 onClick={handleNext}
@@ -252,11 +230,11 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
   return (
     <form onSubmit={handleSubmit} className="w-full">
       {/* Stepper Component */}
-      <div className="flex justify-between mb-6">
+      <div className="flex justify-between mb-5 mt-2">
         {[...Array(totalSteps)].map((_, index) => (
           <div
             key={index}
-            className={`w-1/3 h-[2px] rounded-full ${index === 1 ? 'mx-1' : ''} ${currentStep > index ? 'bg-[#1b8bf9]' : 'bg-gray-300'}`}
+            className={`w-1/3 h-[3px] rounded-full ${index === 1 ? 'mx-1' : ''} ${currentStep > index ? 'bg-[#006D9F]' : 'bg-gray-300'}`}
             onClick={() => setCurrentStep(index + 1)}
             style={{ cursor: 'pointer' }}
           ></div>

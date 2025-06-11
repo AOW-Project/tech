@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
-import MultiStepForm from "./MultiStepForm"
-// import Hero-form from './Hero-from'
+// import MultiStepForm from "./MultiStepForm"
+import MultiStepForm from "./HomeHero-MultiStepform"
 
 // Service slides data
 const slides = [
@@ -121,24 +121,24 @@ export default function HomeHero() {
             )}
           </h1>
 
-          <p className="text-sm text-[#000000] font-inter mb-5 leading-relaxed max-w-[90%] font-medium">{current.description}</p>
+          <p className="text-[16px] text-[#000000] font-weight: 500 font-inter mb-5 leading-relaxed max-w-[90%] font-medium">{current.description}</p>
             
           {/* Features with tick marks */}
           <div className="grid grid-cols-2 gap-x-3 gap-y-2 mb-5">
             {current.features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-2">
+              <div key={index} className="flex items-center gap-1">
                 <img
                   src="/images/about/check.png"
                   alt="tick mark"
                   className="w-4 h-4 flex-shrink-0"
                 />
-                <span className="text-xs text-[#000000] font-inter font-medium">{feature}</span>
+                <span className="text-[14px] text-[#000000] font-inter font-semibod font-medium">{feature}</span>
               </div>
             ))}
           </div>
 
           {/* Form Container */}
-          <div className="border border-[#ADD8E6] rounded-md p-4 flex flex-col gap-4 mt-1 mb-20 w-full min-h-[287px]">
+          <div className="border border-[#006D9F] rounded-xl p-3 flex flex-col gap-2 mt-1 mb-10 w-full min-h-[100px]">
             <MultiStepForm />
           </div>
 
