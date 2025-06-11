@@ -6,61 +6,87 @@ const AboutPage = () => {
     <div className="flex flex-col items-center w-full text-[#000] font-inter">
       {/* Hero Section */}
       <section
-        className="w-full py-16 text-center font-[Nunito] relative bg-white"
+        className="w-full text-center font-[Nunito] relative bg-white"
         style={{
+          paddingTop: "6rem",
+          paddingBottom: "6rem",
           backgroundImage: 'url("/images/bg image.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Content without the dark overlay */}
-        <div className="relative z-10">
-          <p className="text-3xl uppercase font-bold tracking-widest text-black">About Us</p>
-          <h1 className="text-3xl md:text-5xl font-bold my-4 text-black">
-            WHERE <span className="text-[#006D9F]blue-600">IDEAS</span> TURN INTO IMPACT
-          </h1>
-          <p className="max-w-2xl mx-auto text-md md:text-lg text-black">
-            We are a team of experts, creative thinkers and passionate builders. With a futuristic approach, we deliver
-            digital solutions that create impact.
+        {/* Optional: Add a semi-transparent overlay if needed */}
+        {/* <div className="absolute inset-0 bg-black opacity-50 z-0"></div> */}
+
+        {/* Content Layer */}
+        <div className="relative z-10 px-4">
+         <p className="font-[Nunito] font-extrabold text-[48px] leading-[140%] tracking-normal text-center uppercase text-black">
+            About Us
           </p>
-          <button className="mt-6 bg-[#006D9F] text-white px-6 py-2 rounded-full hover:bg-blue-700">
-            Explore solutions
+
+          <h1 className="font-[Nunito] font-extrabold text-[60px] leading-[140%] tracking-normal text-center uppercase text-black my-4">
+            WHERE <span className="text-[#006D9F]">IDEAS</span> TURN INTO IMPACT
+          </h1>
+
+         <p className="font-[Inter] font-medium text-[16px] leading-[140%] tracking-normal text-center text-black max-w-2xl mx-auto">
+              We are a team of experts, creative thinkers and passionate builders. With a futuristic approach, we deliver
+              digital solutions that create impact.
+          </p>
+
+          <button className="mt-6 bg-[#006D9F] text-white px-6 py-2 rounded-full ">
+            See open position
           </button>
         </div>
       </section>
 
+
       {/* Join Our Team */}
-      <section className="w-full flex justify-center bg-white">
-        <div className="w-full max-w-6xl px-4 py-20 font-[Inter]">
-          <p className="text-sm text-[#006D9F] font-semibold uppercase mb-2">Who we are?</p>
-          <h2 className="text-3xl font-bold mb-10 text-black">JOIN TO OUR TEAM</h2>
+    <section className="w-full flex justify-center bg-white px-6 md:px-8 lg:px-12">
+  <div className="w-full max-w-[1344px] pt-[140px] pb-[140px] font-[Inter] flex flex-col gap-[80px]">
+    <div>
+      <p className="text-base text-[#006D9F] font-extrabold uppercase mb-2 font-[Nunito] leading-[1.4]">
+        Who we are?
+      </p>
 
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between md:gap-x-16 gap-y-8">
-            <img src="/images/about/about logo.svg" alt="Company Logo" width={432} height={147} className="shrink-0" />
+      <h2 className="text-[48px] font-extrabold leading-[1.4] text-black text-center md:text-left font-[Nunito] uppercase">
+        JOIN TO OUR TEAM
+      </h2>
+    </div>
 
-            <div className="text-base leading-relaxed max-w-2xl text-black">
-              <p>
-                AOW is a team of tech enthusiasts driven by a passion for innovation and digital excellence. Developers,
-                UX/UI designers, analysts – we collaborate seamlessly to transform ideas into powerful, user-focused IT
-                solutions.
-              </p>
-              <br />
-              <p>
-                We take pride in our teamwork, adaptability, and a forward-thinking mindset that fuels every project we
-                take on. At AOW, it's not just about code – it's about creating smart, effective products that truly
-                make a difference.
-              </p>
-              <br />
-              <p>
-                And guess what? We're always on the lookout for new talent! If you're searching for a company culture
-                that values creativity, encourages growth, and thrives on fresh ideas, explore our open roles and see if
-                AOW is the perfect place for your next career move.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="w-full h-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-[40px]">
+      <img
+        src="/images/about/about logo.svg"
+        alt="Company Logo"
+        width={432}
+        height={147}
+        className="shrink-0 mr-10"
+      />
+
+      <div className="font-[Inter] font-medium text-[16px] leading-[1.4] tracking-[0] text-black text-justify max-w-[832px]">
+        <p>
+          AOW is a team of tech enthusiasts driven by a passion for innovation and digital excellence. Developers,
+          UX/UI designers, analysts – we collaborate seamlessly to transform ideas into powerful, user-focused IT
+          solutions.
+        </p>
+        <br />
+        <p>
+          We take pride in our teamwork, adaptability, and a forward-thinking mindset that fuels every project we
+          take on. At AOW, it's not just about code – it's about creating smart, effective products that truly
+          make a difference.
+        </p>
+        <br />
+        <p>
+          And guess what? We're always on the lookout for new talent! If you're searching for a company culture
+          that values creativity, encourages growth, and thrives on fresh ideas, explore our open roles and see if
+          AOW is the perfect place for your next career move.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Services Section */}
       <section

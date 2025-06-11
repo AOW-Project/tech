@@ -2,89 +2,105 @@ import Image from "next/image"
 
 const teamContent = [
   {
-    image: "/images/team/team1.png", // Replace with your actual image path
+    image: "/images/team/team1.png",
     description:
       "We are passionate about creativity, always exploring new ideas, embracing challenges, and turning trends into results.",
     size: "large",
   },
   {
-    image: "/images/team/team2.png", // Replace with your actual image path
-    description: "Our team thrives on innovation—testing, learning, and growing to bring the best solutions to life.",
+    image: "/images/team/team2.png",
+    description:
+      "Our team thrives on innovation—testing, learning, and growing to bring the best solutions to life.",
     size: "small",
   },
   {
-    image: "/images/team/team3.png", // Replace with your actual image path
-    description: "We love what we do: experimenting, creating, and pushing boundaries to achieve meaningful results.",
+    image: "/images/team/team3.png",
+    description:
+      "We love what we do: experimenting, creating, and pushing boundaries to achieve meaningful results.",
     size: "large",
   },
 ]
 
 export default function TeamSection() {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-white font-inter">
-      <div className="container mx-auto px-4 md:px-6">
+    <section
+      className="py-[140px] bg-white font-inter"
+      style={{ height: "984px" }}
+    >
+      <div className="max-w-[1344px] mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="mb-12">
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold mb-4 bg-blue-50 text-[#006D9F] border-blue-200">
+          <div
+            className="inline-flex items-center px-1 py-0.5 
+                text-[#006D9F]
+                      font-nunito font-extrabold text-[16px] leading-[140%] 
+                      tracking-normal uppercase w-[1344px] h-[22px]">
             OUR TEAM
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6">
+
+          <h2 className="font-nunito font-extrabold text-[48px] leading-[140%] tracking-normal uppercase text-black w-[1344px] h-[67px] mb-6">
             LET'S GET <span className="text-[#006D9F]">ACQUAINTED</span>
           </h2>
+
         </div>
 
-        {/* Team Images Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-7xl mx-auto">
-          {/* Left Large Image */}
-          <div className="lg:col-span-5">
-            <div className="relative group">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image
-                  src={teamContent[0].image || "/placeholder.svg?height=400&width=500&text=Team+Creativity"}
-                  alt="Team working on creativity"
-                  width={500}
-                  height={400}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <p className="text-black text-[16px] leading-relaxed mt-4 max-w-md">{teamContent[0].description}</p>
-            </div>
-          </div>
-
-          {/* Center Small Image */}
-      <div className="lg:col-span-2 flex flex-col justify-center items-center text-center">
-        <p className="text-black text-[16px] leading-relaxed mb-4 max-w-[220px]">
-          {teamContent[1].description}
-        </p>
-        <div className="relative group w-full">
-          <div className="aspect-[3/5] overflow-hidden rounded-2xl">
+        {/* Grid */}
+     <div className="grid grid-cols-1 lg:grid-cols-12 gap-[48px] items-start h-full">
+      {/* Left Large Image + Text */}
+      <div className="lg:col-span-5 flex flex-col justify-between h-[max-content]">
+        <div className="relative group">
+          <div className="w-full max-w-[546px] h-[364px] overflow-hidden rounded-[24px]">
             <Image
-              src={teamContent[1].image || "/placeholder.svg?height=500&width=250&text=Team+Innovation"}
+              src={teamContent[0].image}
+              alt="Team working on creativity"
+              width={546}
+              height={364}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <p className="font-inter font-medium text-[16px] leading-[140%] tracking-normal text-black mt-4 max-w-md">
+            {teamContent[0].description}
+          </p>
+        </div>
+      </div>
+        {/* Center Larger & Elongated Image + Text */}
+        <div className="lg:col-span-2 flex flex-col items-center text-center justify-between h-[550px]">
+          <p className="font-inter font-medium text-[16px] leading-[140%] tracking-normal text-black mb-4 max-w-[450px]">
+            {teamContent[1].description}
+          </p>
+          <div className="relative group w-full max-w-[832px] h-[520px] overflow-hidden rounded-[24px]">
+            <Image
+              src={teamContent[1].image}
               alt="Team innovation"
-              width={250}
-              height={500}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              fill
+              className="object-cover rounded-[24px]"
             />
           </div>
         </div>
-      </div>
 
-          {/* Right Large Image */}
-          <div className="lg:col-span-5">
-            <div className="relative group">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image
-                  src={teamContent[2].image || "/placeholder.svg?height=400&width=500&text=Team+Collaboration"}
-                  alt="Team collaboration"
-                  width={500}
-                  height={400}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <p className="text-black text-[16px] leading-relaxed mt-4 max-w-md">{teamContent[2].description}</p>
-            </div>
+
+
+      {/* Right Large Image + Text */}
+      <div className="lg:col-span-5 flex flex-col justify-between h-[max-content]">
+        <div className="relative group">
+          <div className="w-full max-w-[500px] h-[400px] overflow-hidden rounded-[24px]">
+            <Image
+              src={teamContent[2].image}
+              alt="Team collaboration"
+              width={500}
+              height={400}
+              className="w-full h-full object-cover  rounded-[24px]"
+            />
           </div>
+          <p className="font-inter font-medium text-[16px] leading-[140%] tracking-normal text-black mt-4 max-w-md">
+            {teamContent[2].description}
+          </p>
         </div>
+      </div>
+    </div>
+
+
+       
       </div>
     </section>
   )

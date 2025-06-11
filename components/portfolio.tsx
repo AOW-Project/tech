@@ -43,7 +43,7 @@ const Portfolio = () => {
     {/* Header */}
     <div className="flex justify-between items-start mb-8">
       <div>
-        <div className="inline-flex items-center  px-1 py-0.5 mb-3  text-[#084C6B] uppercase font-nunito font-extrabold text-[16px] leading-[140%]">
+        <div className="inline-flex items-center  px-2 py-0.5 mb-3  text-[#084C6B] uppercase font-nunito font-extrabold text-[16px] leading-[140%]">
         PORTFOLIO
       </div>
 
@@ -61,26 +61,23 @@ const Portfolio = () => {
     </div>
 
     {/* Portfolio Grid */}
-<div className="grid grid-cols-1 md:grid-cols-3 gap-[40px] mb-6">
-  {portfolioItems.map((item, index) => (
-    <div
-      key={index}
-      className="w-[546px] h-[500px] p-[24px] rounded-[24px] bg-white flex items-center justify-center overflow-hidden"
-    >
-      <Image
-        src={item.imageSrc || "/placeholder.svg"}
-        alt={item.title}
-        width={400}
-        height={400}
-        className="w-full h-full object-contain"
-      />
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-[40px] mb-6">
+      {portfolioItems.map((item, index) => (
+        <div
+          key={index}
+          className="relative group overflow-hidden rounded-2xl shadow-lg"
+          onMouseEnter={() => setActiveIndex(index)}
+        >
+          <Image
+            src={item.imageSrc || "/placeholder.svg"}
+            alt={item.title}
+            width={400}
+            height={280}
+            className="w-full h-full object-contain transition-transform  duration-300"
+          />
+        </div>
+      ))}
     </div>
-  ))}
-</div>
-
-
-
-
 
     {/* Progress Indicator */}
     <div className="flex justify-center">

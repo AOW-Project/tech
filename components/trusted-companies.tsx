@@ -11,11 +11,17 @@ const trustedCompanies = [
 export default function TrustedCompanies() {
   return (
     <section
-      className="bg-no-repeat bg-cover bg-center py-[24px] "
-      style={{ backgroundImage: 'url("/images/bg image.png")' }}
+      className="bg-no-repeat bg-cover bg-center mx-auto"
+      style={{
+        backgroundImage: 'url("/images/bg image.png")',
+        width: "100%",
+        height: "148px",
+        paddingTop: "24px",
+        paddingBottom: "24px",
+      }}
     >
-      <div className="max-w-[1440px] h-[148px] mx-auto px-[24px]">
-        <div className="flex items-center justify-start h-[100px] gap-x-[160px]">
+      <div className="w-full h-full px-[24px] md:px-[48px]">
+        <div className="flex items-center justify-between h-full max-w-[1344px] mx-auto">
           {trustedCompanies.map((company, index) => {
             let customWidth = 100;
             let customHeight = 100;
@@ -35,7 +41,10 @@ export default function TrustedCompanies() {
               <div
                 key={index}
                 className="flex flex-col items-center justify-center text-black"
-                style={{ width: `${customWidth}px`, height: `${customHeight}px` }}
+                style={{
+                  width: `${customWidth}px`,
+                  height: `${customHeight}px`,
+                }}
               >
                 <Image
                   src={company.logo || "/placeholder.svg"}

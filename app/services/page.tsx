@@ -118,21 +118,12 @@ export default function Services(): JSX.Element {
       <div className="container mx-auto px-4 md:px-6 max-w-[1344px]">
         {/* These elements will inherit Nunito from the global setting */}
         <div className="mb-10  font-nunito text-left">
-<<<<<<< HEAD
          <p className="font-nunito font-extrabold text-[16px] leading-[140%] text-[#084C6B] uppercase">
          Our Services
         </p>
 
           <h2 className="font-nunito font-extrabold text-[48px] leading-[140%] uppercase text-black mt-1">
             Empowering Your <span className="text-[#006D9F]">Digital</span> World
-=======
-          <p className="text-base font-extrabold text-[#006D9F] uppercase">
-            Our Services
-          </p>
-          <h2 className="text-48px md:text-4xl font-bold text-black mt-1">
-            Empowering Your <span className="text-[#006D9F]">Digital</span>{" "}
-            World
->>>>>>> 67b8a9f26268e0d4661a0f8720a01d07f6d6fe63
           </h2>
 
         </div>

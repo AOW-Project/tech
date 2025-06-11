@@ -66,14 +66,14 @@ export default function UniqueFeatures() {
     </div>
 
     {/* Features Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
       {uniqueFeatures.map((feature, index) => (
         <div
           key={index}
           className="w-full p-[24px] rounded-[24px] border border-[#006D9F] flex flex-col gap-[6px]"
         >
           {/* Icon + Title */}
-          <div className="flex items-center gap-[8px] mb-2">
+          <div className="flex items-center gap-[2px] mb-2">
             <div className="w-[40px] h-[40px] rounded-[10px] bg-[#084C6B] flex items-center justify-center">
               <Image
                 src={feature.iconImage}
