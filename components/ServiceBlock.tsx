@@ -44,17 +44,32 @@ const ServiceBlock: React.FC<ServiceBlockProps> = ({
 
       {/* Text & Accordion */}
       <div className="w-full md:w-1/2 flex flex-col justify-start">
-        <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">{title}</h2>
-        <Accordion items={accordionItems} />
+        <h2 className="text-2xl md:text-3xl font-bold font-nunito text-black mb-4 ml-3">{title}</h2>
+        <Accordion  items={accordionItems} />
 
         {/* See More Button (static for all, navigates only for App Development) */}
-        <div className={`mt-6 flex ${reverse ? "justify-start" : "justify-end"}`}>
+        <div className={`mt-6 flex ${reverse ? "justify-start" : "justify-end"} `}>
           <button
             onClick={handleSeeMore}
-            className="bg-[#004e63] text-white rounded-full px-6 py-2 font-semibold text-base shadow hover:bg-[#003b4e] transition-colors"
+            className="bg-[#004e63] text-white rounded-full px-6 py-2 font-inter font-semibold  text-base shadow hover:bg-[#003b4e] transition-all duration-300 flex items-center gap-2 group"
             type="button"
           >
             See more
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="16" 
+              height="28" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="#FFFFFF" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              className="ml-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+            >
+              <path d="M7 7h10v10" />
+              <path d="M7 17 17 7" />
+            </svg>
           </button>
         </div>
       </div>
