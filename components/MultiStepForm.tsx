@@ -60,8 +60,8 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
         return (
           <div className="h-[220px] flex flex-col justify-between">
             <div className="space-y-2">
-              <h2 className="text-black text-base font-nunito">LET'S CREATE SOMETHING EXTRAORDINARY TOGETHER!</h2>
-              <h3 className="text-[#1b8bf9] text-sm font-semibold">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
+              <h2 className="text-black text-[16px] font-weight: 500 font-nunito">LET'S CREATE SOMETHING EXTRAORDINARY TOGETHER!</h2>
+              <h3 className="text-[#084C6B] text-[16px] font-inter font-semibold">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
               <div>
                 <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-1">
                   Services*
@@ -256,7 +256,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
         {[...Array(totalSteps)].map((_, index) => (
           <div
             key={index}
-            className={`w-1/3 h-[2px] rounded-full ${index === 1 ? 'mx-1' : ''} ${currentStep > index ? 'bg-[#1b8bf9]' : 'bg-gray-300'}`}
+            className={`w-1/3 h-[2px] rounded-full ${index === 1 ? 'mx-1' : ''} ${currentStep > index ? 'bg-[#006D9F]' : 'bg-gray-300'}`}
             onClick={() => setCurrentStep(index + 1)}
             style={{ cursor: 'pointer' }}
           ></div>

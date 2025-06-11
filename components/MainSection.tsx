@@ -171,7 +171,7 @@ const MainSection: React.FC = () => {
           </h1>
           
           {/* Form Container */}
-          <div className="border border-[#ADD8E6] rounded-md p-4 flex flex-col gap-4 mt-1 mb-20 w-full min-h-[287px]">
+          <div className="border border-[#006D9F] rounded-xl p-4 flex flex-col gap-4 mt-1 mb-20 w-full min-h-[293px]">
             <MultiStepForm />
           </div>
         </div>
