@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 const trustedCompanies = [
   { name: "Zoom", logo: "/images/trusted/zoom 1.png" },
@@ -6,30 +6,49 @@ const trustedCompanies = [
   { name: "Apple", logo: "/images/trusted/apple 1.png" },
   { name: "Microsoft Azure", logo: "/images/trusted/microsoft_azure 1.png" },
   { name: "Amazon", logo: "/images/trusted/amazon 1.png" },
-]
+];
 
 export default function TrustedCompanies() {
   return (
-    <section className=" bg-gray-50"> {/* Reduced top padding */}
-      <div className="container mx-auto px-2 md:px-6 w-[1920px] h-[148px]">
-        {/* Optional heading */}
-      
-        {/* Logo row - evenly distributed across the width with more spacing */}
-        <div className="flex justify-between items-center max-w-6xl mx-auto w-[2000px] h-[100px]">
-          {trustedCompanies.map((company, index) => (
-            <div key={index} className="flex items-center justify-center transition-all duration-300 hover:scale-105">
-              <Image
-                src={company.logo || "/placeholder.svg"}
-                alt={`${company.name} logo`}
-                width={120}
-                height={40}
-                className="h-10 md:h-12 lg:h-14 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-                priority={index < 3} // Prioritize first 3 logos for faster loading
-              />
-            </div>
-          ))}
+    <section
+      className="bg-no-repeat bg-cover bg-center py-[24px] "
+      style={{ backgroundImage: 'url("/images/bg image.png")' }}
+    >
+      <div className="max-w-[1440px] h-[148px] mx-auto px-[24px]">
+        <div className="flex items-center justify-start h-[100px] gap-x-[160px]">
+          {trustedCompanies.map((company, index) => {
+            let customWidth = 100;
+            let customHeight = 100;
+
+            if (company.name === "Apple") {
+              customWidth = 140;
+              customHeight = 110;
+            } else if (company.name === "Microsoft Azure") {
+              customWidth = 150;
+              customHeight = 110;
+            } else if (company.name === "Amazon") {
+              customWidth = 140;
+              customHeight = 110;
+            }
+
+            return (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center text-black"
+                style={{ width: `${customWidth}px`, height: `${customHeight}px` }}
+              >
+                <Image
+                  src={company.logo || "/placeholder.svg"}
+                  alt={`${company.name} logo`}
+                  width={customWidth}
+                  height={customHeight}
+                  className="object-contain"
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
-  )
+  );
 }

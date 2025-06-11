@@ -52,20 +52,22 @@ export default function TeamSection() {
           </div>
 
           {/* Center Small Image */}
-          <div className="lg:col-span-2 flex flex-col justify-center">
-            <div className="relative group">
-              <div className="aspect-[3/4] overflow-hidden rounded-2xl">
-                <Image
-                  src={teamContent[1].image || "/placeholder.svg?height=300&width=250&text=Team+Innovation"}
-                  alt="Team innovation"
-                  width={250}
-                  height={300}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <p className="text-black text-[16px] leading-relaxed mt-4 text-center">{teamContent[1].description}</p>
-            </div>
+      <div className="lg:col-span-2 flex flex-col justify-center items-center text-center">
+        <p className="text-black text-[16px] leading-relaxed mb-4 max-w-[220px]">
+          {teamContent[1].description}
+        </p>
+        <div className="relative group w-full">
+          <div className="aspect-[3/5] overflow-hidden rounded-2xl">
+            <Image
+              src={teamContent[1].image || "/placeholder.svg?height=500&width=250&text=Team+Innovation"}
+              alt="Team innovation"
+              width={250}
+              height={500}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
+        </div>
+      </div>
 
           {/* Right Large Image */}
           <div className="lg:col-span-5">
