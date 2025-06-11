@@ -23,7 +23,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
   }
 
   return (
-    <div className="divide-y divide-gray-200">
+    <div className="divide-y font-inter divide-gray-200">
       {items.map((item, idx) => (
         <div key={idx}>
           <button

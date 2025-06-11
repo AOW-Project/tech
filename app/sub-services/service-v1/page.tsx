@@ -9,6 +9,7 @@ import MultiStepForm from "@/components/MultiStepForm";
 
 import { Users, Zap, Shield, HeadphonesIcon } from "lucide-react"
 
+
 export default function ServiceV1Page() {
   const [email, setEmail] = useState('');
 
@@ -323,7 +324,7 @@ export default function ServiceV1Page() {
                 alt="Magnifying glass over code interface"
                 width={660} // Image width
                 height={464} // Image height
-                className="rounded-[24px] w-full h-auto object-cover max-w-[660px]"
+                className="rounded-[24px] w-full h-auto object-contain max-w-[660px]  transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
                 />
             </div>
             </div>
@@ -347,108 +348,108 @@ export default function ServiceV1Page() {
         </section>
       {/* RECENT WORKS Section */}
 
-     <section className="bg-white py-[140px] px-6 md:px-24 flex justify-center">
-        <div className="max-w-[1344px] w-full flex flex-col gap-[80px]">
-            <div className="text-center md:text-left">
-            <p className="text-sm font-bold text-[#006D9F] uppercase mb-4">RECENT WORKS</p>
-            <h2 className="text-4xl font-bold text-[#1F2937]">
-                OUR LATEST <span className="text-[#006D9F]">PROJECTS IN ACTION</span>
+     <section className="bg-white py-[110px] px-6 md:px-24 flex justify-center">
+        <div className="max-w-[1344px] w-full flex flex-col ">
+            <div className="text-center md:text-left mb-4">
+            <p className="text-sm font-bold text-[#006D9F] uppercase mb-1">RECENT WORKS</p>
+            <h2 className="text-4xl font-nunito font-extrabold text-[#1F2937]">
+                OUR LATEST <span className="text-[#006D9F]">PROJECTS </span>IN ACTION
             </h2>
             </div>
 
             {/* Project 1: AUTOSQUARE ECOMMERCE WEBSITE */}
             <div className="flex flex-col lg:flex-row items-center gap-[40px]">
-            <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="w-full lg:w-1/2 flex justify-center mt-5">
                 <Image
                 src="/images/v1/auto.png"
                 alt="Autosquare E-commerce Website"
                 width={672}
-                height={464}
-                className="w-full h-auto object-contain"
+                height={470}
+                className="w-full h-auto object-contain transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
                 />
             </div>
-            <div className="w-full lg:w-1/2 flex flex-col gap-4">
+            <div className="w-full lg:w-1/2 font-inter flex flex-col gap-3 mt-4">
                 <p className="text-xs font-bold text-gray-600 uppercase">UI/UX DESIGN FOR A TECH STARTUP WEBSITE</p>
-                <h3 className="text-2xl font-bold tick-[#1F2937] mb-2">AUTOSQUARE ECOMMERCE WEBSITE</h3>
-                <p className="text-black text-base mb-4">
+                <h3 className="text-2xl font-nunito font-extrabold tick-[#1F2937] ">AUTOSQUARE ECOMMERCE WEBSITE</h3>
+                <p className="text-black font-inter text-base mb-2">
                 We revamped the website of a growing tech startup, focusing on usability and visual aesthetics. By conducting in-depth UI/UX research, we optimized the user journey, ensuring seamless navigation and higher engagement. Our redesign boosted brand identity while maintaining a clean and functional layout.
                 </p>
-                <p className="font-semibold text-black">What We Did:</p>
-                <ul className="list-none space-y-2">
+                <p className="font-semibold text-black -mt-3">What We Did:</p>
+                <ul className="list-none space-y-1">
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Conducted UX research and competitor analysis
                 </li>
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Created wireframes and interactive prototypes
                 </li>
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Redesigned the UI with a modern, clean aesthetic
                 </li>
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Optimized the user journey for better engagement
                 </li>
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Implemented a mobile-first approach for responsiveness
                 </li>
                 </ul>
-                <p className="text-black text-base mt-4">
+                <p className="text-black text-base ">
                 **Results:** Increased session duration by 10% and reduced bounce rates by 35%.
                 </p>
-                <p className="text-black text-base">
+                <p className="text-black text-base -mt-3 mb-3">
                 Go to site: <a href="https://www.autosquare.com" target="_blank" rel="noopener noreferrer" className="text-[#007BFF] underline">www.autosquare.com</a>
                 </p>
             </div>
             </div>
 
             {/* Project 2: BHARAT SPORTS FOUNDATION */}
-            <div className="flex flex-col lg:flex-row-reverse items-center gap-[40px]">
-            <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-[40px] mt-4">
+            <div className="w-full lg:w-1/2 flex justify-center mt-8">
                 <Image
                 src="/images/v1/sports.png"
                 alt="Bharat Sports Foundation"
                 width={672}
                 height={464}
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
                 />
             </div>
-            <div className="w-full lg:w-1/2 flex flex-col gap-4">
-                <p className="text-xs font-bold text-gray-600 uppercase">INTEGRATED DIGITAL MARKETING FOR AN E-COMMERCE BRAND</p>
-                <h3 className="text-2xl font-bold text-black mb-2">BHARAT SPORTS FOUNDATION</h3>
-                <p className="text-black text-base mb-4">
+            <div className="w-full lg:w-1/2 flex flex-col gap-3">
+                <p className="text-xs font-bold text-gray-600 uppercase font-nunito mt-6">INTEGRATED DIGITAL MARKETING FOR AN E-COMMERCE BRAND</p>
+                <h3 className="text-2xl font-nunito font-extrabold text-black mb-2 -mt-2">BHARAT SPORTS FOUNDATION</h3>
+                <p className="text-black text-base mb-1">
                 We developed and executed a comprehensive digital marketing strategy for an online retail company. This included SEO optimization, targeted social media campaigns, and performance-driven PPC advertising. As a result, we boosted website traffic by 40% and significantly increased conversion rates.
                 </p>
                 <p className="font-semibold text-black">What We Did:</p>
-                <ul className="list-none space-y-2">
+                <ul className="list-none space-y-1">
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Developed a full-funnel digital marketing strategy
                 </li>
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Improved SEO and optimized website content
                 </li>
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Launched targeted social media campaigns (Facebook, Instagram, TikTok)
                 </li>
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Set up Google Ads & retargeting strategies
                 </li>
                 <li className="flex items-start gap-2 text-black">
-                    <span className="flex-shrink-0 mt-1">•</span> {/* Placeholder for your arrow */}
+                    <Image src="/images/about/check.png" alt="check" width={20} height={20} className="flex-shrink-0 mt-1" />
                     Implemented email marketing automation for abandoned carts
                 </li>
                 </ul>
-                <p className="text-black text-base mt-4">
+                <p className="text-black text-base ">
                 **Results:** 40% increase in organic traffic and a 25% boost in conversion rates.
                 </p>
-                <Link
+                {/* <Link
                 href="/projects/bharat-sports"
                 className="inline-flex items-center gap-2 text-[#007BFF] hover:text-[#0056b3] transition-colors"
                 >
@@ -456,7 +457,7 @@ export default function ServiceV1Page() {
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.7417 8.00004L6.0417 3.30004L7 2.34171L13.6667 8.00004L7 13.6584L6.0417 12.7L10.7417 8.00004Z" fill="currentColor"/>
                 </svg>
-                </Link>
+                </Link> */}
             </div>
             </div>
         </div>
