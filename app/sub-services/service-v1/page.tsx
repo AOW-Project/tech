@@ -348,7 +348,7 @@ export default function ServiceV1Page() {
         </section>
       {/* RECENT WORKS Section */}
 
-     <section className="bg-white py-[110px] px-6 md:px-24 flex justify-center">
+     <section className="bg-white py-[120px] px-6 md:px-24 flex justify-center">
         <div className="max-w-[1344px] w-full flex flex-col ">
             <div className="text-center md:text-left mb-4">
             <p className="text-sm font-bold text-[#006D9F] uppercase mb-1">RECENT WORKS</p>
