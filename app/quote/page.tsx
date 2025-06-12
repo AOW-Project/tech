@@ -8,146 +8,157 @@ import Image from "next/image"
 
 export default function GetQuotePage() {
   return (
-    <div className="min-h-screen relative">
+    <section className="relative w-full" style={{ aspectRatio: '826/434' }}>
       {/* Full Background Image */}
-      <Image src="/images/contact us.jpg" alt="Communication background" fill className="object-cover" priority />
+      <div className="absolute inset-0 w-full h-full">
+        <Image 
+          src="/images/contact us-2.jpg" 
+          alt="Communication background" 
+          fill 
+          className="object-contain" 
+          priority 
+          sizes="100vw"
+        />
+      </div>
 
       {/* White to Transparent Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-white/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent z-10" />
 
-      {/* Floating Icons Overlay - positioned on the right side */}
-      <div className="absolute inset-0">
-        {/* Phone Icons */}
-        <Phone className="absolute top-16 right-20 w-12 h-12 text-white/60 animate-pulse" />
-        <Phone className="absolute bottom-32 right-32 w-8 h-8 text-white/40" />
-
-        {/* Email Icons */}
-        <Mail className="absolute top-32 right-[25%] w-10 h-10 text-white/50" />
-        <AtSign className="absolute top-48 right-32 w-14 h-14 text-white/30" />
-        <AtSign className="absolute bottom-48 right-24 w-10 h-10 text-white/50" />
-
-        {/* Message Icons */}
-        <MessageCircle className="absolute bottom-20 right-40 w-12 h-12 text-white/40" />
-        <MessageCircle className="absolute top-40 right-[35%] w-8 h-8 text-white/60" />
-
-        {/* Additional decorative elements */}
-        <div className="absolute top-24 right-[30%] w-4 h-4 bg-white/20 rounded-full animate-bounce" />
-        <div className="absolute bottom-40 right-[45%] w-6 h-6 bg-white/15 rounded-full" />
-        <div className="absolute top-56 right-16 w-3 h-3 bg-white/25 rounded-full animate-pulse" />
-      </div>
-
-      {/* Form Content */}
-      <div className="relative z-10 flex items-center justify-start min-h-screen py-16">
-        <div className="ml-16 lg:ml-20 p-6" style={{ width: "580px" }}>
-          <div className="mb-6">
-            <h1 className="text-lg font-bold text-gray-900">LET'S DISCUSS YOUR PROJECT!</h1>
-          </div>
-
-          <form className="space-y-4">
-            {/* Name and Phone in same row */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="name" className="text-sm font-medium text-gray-700">
-                  Name*
-                </Label>
-                <Input
-                  id="name"
-                  placeholder="Name"
-                  className="w-full bg-white border-gray-300 h-10 text-sm rounded-3xl"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
-                  Phone*
-                </Label>
-                <Input
-                  id="phone"
-                  placeholder="+1 (111) 111-1234"
-                  className="w-full bg-white border-gray-300 h-10 text-sm rounded-3xl"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                Email*
-              </Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="example@email.com"
-                className="w-full bg-white border-gray-300 h-10 text-sm rounded-3xl"
-                required
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="company" className="text-sm font-medium text-gray-700">
-                Company Name
-              </Label>
-              <Input
-                id="company"
-                placeholder="Company Name"
-                className="w-full bg-white border-gray-300 h-10 text-sm rounded-3xl"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="service" className="text-sm font-medium text-gray-700">
-                Service*
-              </Label>
-              <Select required>
-                <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm rounded-3xl">
-                  <SelectValue placeholder="Choose service..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="web-development">Web Development</SelectItem>
-                  <SelectItem value="mobile-app">Mobile App Development</SelectItem>
-                  <SelectItem value="ui-ux-design">UI/UX Design</SelectItem>
-                  <SelectItem value="digital-marketing">Digital Marketing</SelectItem>
-                  <SelectItem value="consulting">Consulting</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="description" className="text-sm font-medium text-gray-700">
-                Description*
-              </Label>
-              <Textarea
-                id="description"
-                placeholder="Describe requirements..."
-                className="w-full min-h-[60px] resize-none bg-gray-100 border-gray-300 text-sm rounded-3xl"
-              />
-            </div>
-
-            <div className="py-2">
-              <Label className="text-sm font-medium text-gray-700 flex items-center gap-2">
-                Drop a file
-                <Image
-                  src="/images/footer/load file.png"
-                  alt="Upload file icon"
-                  width={16}
-                  height={16}
-                  className="w-4 h-4"
-                />
-              </Label>
-            </div>
-
-            <div className="pt-6 flex justify-end">
-              <Button
-                type="submit"
-                className="bg-gray-600 hover:bg-gray-700 text-white px-16 py-2.5 text-sm rounded-full"
-              >
-                Submit
-              </Button>
-            </div>
-          </form>
+      {/* Floating Icons Overlay */}
+      {/* <div className="absolute inset-0 z-10">
+        <div className="absolute top-1/4 left-1/4">
+          <Phone className="w-8 h-8 text-[#1b8bf9] opacity-20" />
         </div>
+        <div className="absolute top-1/3 right-1/4">
+          <Mail className="w-8 h-8 text-[#1b8bf9] opacity-20" />
+        </div>
+        <div className="absolute bottom-1/4 left-1/3">
+          <MessageCircle className="w-8 h-8 text-[#1b8bf9] opacity-20" />
+        </div>
+        <div className="absolute bottom-1/3 right-1/3">
+          <AtSign className="w-8 h-8 text-[#1b8bf9] opacity-20" />
+        </div>
+      </div> */}
+
+      {/* Content Container */}
+      <div className="relative z-20 container mx-auto h-full flex flex-col lg:flex-row items-start px-4 md:px-10 lg:px-16 pt-0 pb-4 lg:gap-[40px] lg:ml-[4.8%]">
+        {/* Left Side: Form */}
+        <div className="w-full lg:w-[45%] flex flex-col gap-3">
+          <div className="flex flex-col gap-4 mt-6 mb-10 w-full">
+            <div className="mt-7 font-bold">
+              <h1 className="mt-5 text-lg font-nunito text-[#006D9F]">LET'S DISCUSS YOUR PROJECT!</h1>
+            </div>
+
+            <form className="space-y-3">
+              {/* Name and Phone in same row */}
+              <div className="grid grid-cols-2 gap-2">
+                <div className="space-y-2">
+                  <Label htmlFor="name" className="text-sm font-medium text-gray-700">
+                    Name*
+                  </Label>
+                  <Input
+                    id="name"
+                    placeholder="   Name"
+                    className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9] h-10 text-sm"
+                    required
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
+                    Phone*
+                  </Label>
+                  <Input
+                    id="phone"
+                    placeholder="   +1 (111) 111-1234"
+                    className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9] h-10 text-sm"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                  Email*
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="   example@email.com"
+                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9] h-10 text-sm"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="company" className="text-sm font-medium text-gray-700">
+                  Company Name
+                </Label>
+                <Input
+                  id="company"
+                  placeholder="  Company Name"
+                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9] h-10 text-sm"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="service" className="text-sm font-medium text-gray-700">
+                  Service*
+                </Label>
+                <select
+                  id="service"
+                  name="service"
+                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9] h-10 text-sm"
+                  required
+                >
+                  <option value="">   Choose service...</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="mobile-app">Mobile App Development</option>
+                  <option value="ui-ux-design">UI/UX Design</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="consulting">Consulting</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="description" className="text-sm font-medium text-[#95ABB9]">
+                  Subservice*
+                </Label>
+                <Input
+                  id="description"
+                  placeholder="  Choose subservice..."
+                  className="bg-gray-100 w-full border border-[#95ABB9] rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9] h-10 text-sm"
+                />
+              </div>
+
+              <div className="py-2">
+                <Label className="-mt-2 text-sm font-medium text-[#084C6B] flex items-center gap-2">
+                  Drop a file
+                  <Image
+                    src="/images/footer/load file.png"
+                    alt="Upload file icon"
+                    width={16}
+                    height={16}
+                    className="w-4 h-4"
+                  />
+                </Label>
+              </div>
+
+              <div className="pt-6 flex justify-end">
+                <Button
+                  type="submit"
+                  className="-mt-10 bg-gray-600 hover:bg-gray-700 text-white px-16 py-2.5 text-sm rounded-full"
+                >
+                  Submit
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        {/* Right Side: Reserved space */}
+        <div className="hidden lg:block w-full lg:w-[55%] h-full"></div>
       </div>
-    </div>
+    </section>
   )
 }

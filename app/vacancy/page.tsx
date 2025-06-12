@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Upload } from "lucide-react"
+import Image from "next/image"
 
 export default function VacancyPage() {
   const [formData, setFormData] = useState({
@@ -32,33 +33,33 @@ export default function VacancyPage() {
   }
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-[#F5F7FA] py-6 font-sans">
-      <div className="w-full max-w-6xl ">
+    <div className="flex flex-col items-center min-h-screen bg-[#F5F7FA] py-6 px-20  mx-auto">
+      <div className="w-full max-w-full ">
         {/* Header Section */}
         <div className="mb-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-1 text-left leading-tight">UI/UX DESIGNER</h1>
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="bg-[#E6F0FA] text-[#0B6E99] text-xs font-semibold px-3 py-1 rounded-full">Remote, India</span>
-            <span className="bg-[#E6F0FA] text-[#0B6E99] text-xs font-semibold px-3 py-1 rounded-full">Full time</span>
-            <span className="bg-[#E6F0FA] text-[#0B6E99] text-xs font-semibold px-3 py-1 rounded-full">Design</span>
+          <h1 className="text-5xl mt-3 font-extrabold font-nunito text-gray-900 mb-1 text-left leading-tight">UI/UX DESIGNER</h1>
+          <div className="flex flex-wrap gap-2 mb-5 mt-3 ">
+            <span className="bg-[#C5DEE9] text-[#0B6E99] text-xs font-semibold px-4 py-2 rounded-full">Remote, India</span>
+            <span className="bg-[#C5DEE9] text-[#0B6E99] text-xs font-semibold px-4 py-2 rounded-full">Full time</span>
+            <span className="bg-[#C5DEE9] text-[#0B6E99] text-xs font-semibold px-4 py-2 rounded-full">Design</span>
           </div>
         </div>
 
         {/* Content Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 font-inter gap-6 items-start mb-20">
           {/* Left: Job Description */}
-          <div className="lg:col-span-3 w-full text-gray-800 text-[15px] space-y-4">
+          <div className="lg:col-span-3 w-full text-gray-800 text-[16px] space-y-1">
             <div>
-              <p className="mb-3 text-gray-700">
+              <p className="mb-3 text-[#000000]  font-medium font-inter">
                 Are you passionate about creating user-centered, visually compelling designs? Do you want to work with international clients and startups while making a real impact? Join our team as a UI/UX Designer and become an integral part of our projects!
               </p>
-              <p className="mb-3 text-gray-700">
+              <p className="mb-7 text-[#000000]  font-medium font-inter">
                 We are looking for someone who thrives in a collaborative environment and is eager to continue doing meaningful work that enhances user experiences. If you are ready to bring your design skills to the next level and work with a dynamic, open-minded team, this opportunity is for you.
               </p>
             </div>
             <div>
-              <h3 className="font-bold text-gray-900 mb-1 uppercase">Requirements:</h3>
-              <ul className="list-disc list-inside space-y-0.5 text-gray-700">
+              <h3 className="text-xl  text-[#000000] font-inter font-bold mb-3 uppercase">Requirements:</h3>
+              <ul className="list-disc list-inside  text-[#000000]  font-medium">
                 <li>1.5+ years of experience in UI/UX design, particularly in an outsourcing company</li>
                 <li>Excellent proficiency in Figma, Photoshop, Illustrator</li>
                 <li>English at B2 level</li>
@@ -68,8 +69,8 @@ export default function VacancyPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-gray-900 mb-1 uppercase">Responsibilities:</h3>
-              <ul className="list-disc list-inside space-y-0.5 text-gray-700">
+              <h3 className="text-xl  text-[#000000] font-inter font-bold mb-3 uppercase mt-3 ">Responsibilities:</h3>
+              <ul className="list-disc list-inside  text-[#000000]  font-medium">
                 <li>Creating high-quality designs for various services</li>
                 <li>Communicating directly with clients</li>
                 <li>Developing user flows, wireframes, prototypes, clickable prototypes and mobile adaptive designs</li>
@@ -78,14 +79,14 @@ export default function VacancyPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-gray-900 mb-1 uppercase">Will be a plus:</h3>
-              <ul className="list-disc list-inside space-y-0.5 text-gray-700">
+              <h3 className="text-xl  text-[#000000] font-inter font-bold mb-3 uppercase mt-4 ">Will be a plus:</h3>
+              <ul className="list-disc list-inside  text-[#000000] font-medium">
                 <li>Completed additional courses in animations, web applications, and product design</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-gray-900 mb-1 uppercase">What we offer:</h3>
-              <ul className="list-disc list-inside space-y-0.5 text-gray-700">
+              <h3 className="text-xl  text-[#000000] font-inter font-bold mb-3 uppercase mt-6 ">What we offer:</h3>
+              <ul className="list-disc list-inside  text-[#000000]  font-medium">
                 <li>Fixed salary + bonuses</li>
                 <li>Flexible working hours: start between 9:00–11:00 and finish between 18:00–20:00</li>
                 <li>Subscriptions to all services for convenient work: Figma, Illustrator, Photoshop</li>
@@ -102,12 +103,12 @@ export default function VacancyPage() {
             </div>
           </div>
           {/* Right: Application Form */}
-          <div className="lg:col-span-2 w-full">
+          <div className="lg:col-span-2 w-full -ml-5">
             <form
-              className="flex flex-col gap-3 w-full bg-[#F5F7FA] border border-[#74aee9] p-4 rounded-lg sticky top-4"
+              className="flex flex-col gap-2 w-full bg-[#F5F7FA] border border-[#006D9F] p-3 rounded-xl sticky top-4"
               onSubmit={handleSubmit}
             >
-              <h3 className="text-[#0B6E99] text-sm font-semibold mb-1 uppercase">
+              <h3 className="text-[#006D9F]  text-[12px] font-nunito font-weight:500 uppercase">
                 We are excited to learn more about you and your experience
               </h3>
               <div>
@@ -119,7 +120,7 @@ export default function VacancyPage() {
                   onChange={handleChange}
                   required
                   placeholder="Name"
-                  className="w-full bg-transparent border-0 border-b border-[#A7BDCB] focus:border-b-2 focus:border-blue-500 focus:ring-0 text-gray-900 placeholder-gray-400"
+                  className="w-full bg-transparent border border-[#A7BDCB] rounded-full px-4 focus:border-[#1b8bf9] focus:ring-2 focus:ring-[#1b8bf9] text-gray-900 placeholder-gray-400 h-8"
                 />
               </div>
               <div>
@@ -131,11 +132,19 @@ export default function VacancyPage() {
                   onChange={handleChange}
                   required
                   placeholder="example@gmail.com"
-                  className="w-full bg-transparent border-0 border-b border-[#A7BDCB] focus:border-b-2 focus:border-blue-500 focus:ring-0 text-gray-900 placeholder-gray-400"
+                  className="w-full bg-transparent border border-[#A7BDCB] rounded-full px-4 focus:border-[#1b8bf9] focus:ring-2 focus:ring-[#1b8bf9] text-gray-900 placeholder-gray-400 h-8"
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-gray-700 mb-0.5">Attach your CV</label>
+                <label className="block text-xs font-inter font-medium text-[#084C6B] mb-0.5 flex items-center gap-2">Attach your CV
+                <Image
+                    src="/images/footer/load file.png"
+                    alt="Upload file icon"
+                    width={19}
+                    height={19}
+                    className="w-4 h-4"
+                  />
+                </label>
                 <div className="flex items-center gap-1.5">
                   <button
                     type="button"
@@ -145,9 +154,7 @@ export default function VacancyPage() {
                   >
                     <Upload size={16} />
                   </button>
-                  <span className="text-xs text-gray-600">
-                    {formData.resume ? formData.resume.name : "No file chosen"}
-                  </span>
+                  
                 </div>
                 <input
                   ref={fileInputRef}
@@ -161,7 +168,7 @@ export default function VacancyPage() {
               <Button
                 type="submit"
                 size="sm"
-                className="w-24 self-end rounded-md bg-[#0B6E99] hover:bg-[#095b7f] text-white text-sm font-semibold py-1.5 px-3 mt-1"
+                className="w-24 self-end rounded-full bg-[#084C6B] hover:bg-[#095b7f] text-white text-sm font-semibold py-1.5 px-15 mt-1"
               >
                 Next
               </Button>
