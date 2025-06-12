@@ -118,13 +118,14 @@ export default function Services(): JSX.Element {
       <div className="container mx-auto px-4 md:px-6 max-w-[1344px]">
         {/* These elements will inherit Nunito from the global setting */}
         <div className="mb-10  font-nunito text-left">
-          <p className="text-base font-extrabold text-[#006D9F] uppercase">
-            Our Services
-          </p>
-          <h2 className="text-48px md:text-4xl font-bold text-black mt-1">
-            Empowering Your <span className="text-[#006D9F]">Digital</span>{" "}
-            World
+         <p className="font-nunito font-extrabold text-[16px] leading-[140%] text-[#084C6B] uppercase">
+         Our Services
+        </p>
+
+          <h2 className="font-nunito font-extrabold text-[48px] leading-[140%] uppercase text-black mt-1">
+            Empowering Your <span className="text-[#006D9F]">Digital</span> World
           </h2>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-6 justify-center">
@@ -136,33 +137,36 @@ export default function Services(): JSX.Element {
             >
               {/* Top-right icon */}
               <div className="absolute top-6 right-6">
-                <div className="h-8 w-8 rounded-full flex items-center justify-center">
-                  <img src="/images/arrow.svg" alt="Arrow" className="h-5 w-5" />
-                </div>
-              </div>
+            <div className="w-[60px] h-[60px] flex items-center justify-center">
+              <img src="/images/arrow.svg" alt="Arrow" className="w-[48px] h-[48px]" />
+            </div>
+          </div>
 
               {/* Left side: Title and Image */}
-              <div className="flex flex-col justify-between w-[260px] h-[200px]">
-                <h3 className="font-bold text-base text-black uppercase leading-[140%] h-[22px]">
-                  {service.title}
-                </h3>
-                <img
-                  src={service.image || "/placeholder.svg"}
-                  alt={`${service.title} icon`}
-                  className="w-[260px] h-[100px] object-cover rounded-2xl"
-                />
-              </div>
+            <div className="flex flex-col justify-between w-[260px] h-[208px]">
+          <h3 className="font-inter font-bold text-[24px] leading-[100%] uppercase w-[260px] h-[29px] text-black">
+            {service.title}
+           </h3>
 
+                  <img
+            src={service.image || "/placeholder.svg"}
+            alt={`${service.title} icon`}
+            className="w-[260px] h-[100px] rounded-[16px] object-cover"
+          />
+          </div>
               {/* Right side: Items list */}
-              <div className="flex-1 overflow-auto w-[264px] h-[200px] flex flex-col gap-2">
-                <ul className="space-y-1">
-                  {service.items.map((item: string, idx: number) => (
-                    <li key={idx} className="text-14px text-black"> {/* Changed text-14px to text-sm */}
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        <div className="w-[264px] flex flex-col gap-[8px]">
+      <ul className="flex flex-col gap-[4px]">
+        {service.items.map((item: string, idx: number) => (
+          <li
+            key={idx}
+            className="font-inter font-medium text-[14px] leading-[140%] text-black h-[22px]"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+            </div>
             </div>
           ))}
         </div>

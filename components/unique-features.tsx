@@ -47,55 +47,57 @@ const uniqueFeatures = [
 
 export default function UniqueFeatures() {
   return (
-    <section
-      className="py-10 bg-cover bg-no-repeat bg-center font-inter bg-white" 
+   <section className="bg-white font-inter pt-0 pb-[140px]">
+  <div className="max-w-[1344px] mx-auto px-[20px]">
+    {/* Header */}
+    <div className="mb-10">
+      <div className="text-[#084C6B] text-[16px] font-bold uppercase mb-2">
+        EXCEPTIONAL FEATURES
+      </div>
 
-       // Replace with your real path
-    >
-      <div className="container mx-auto px-4 md:px-6">
-        {/* Header */}
-        <div className="mb-12">
-          <div className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold mb-3 bg-blue-50 text-[#084C6B] border-[#006D9F]">
-            EXCEPTIONAL FEATURES
+      <h2 className="text-[48px] font-extrabold uppercase text-black leading-tight mb-4">
+        WHAT MAKES AOW UNIQUE COMPARED TO OTHERS?
+      </h2>
+
+      <p className="max-w-[774px] text-[16px] font-medium text-black leading-[140%]">
+        We stand out blending with a team of experts working all together. Client-first approach and innovation
+        makes us different from others. So here are a few points below:
+      </p>
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+      {uniqueFeatures.map((feature, index) => (
+        <div
+          key={index}
+          className="w-full p-[24px] rounded-[24px] border border-[#006D9F] flex flex-col gap-[6px]"
+        >
+          {/* Icon + Title */}
+          <div className="flex items-center gap-[2px] mb-2">
+            <div className="w-[40px] h-[40px] rounded-[10px] bg-[#084C6B] flex items-center justify-center">
+              <Image
+                src={feature.iconImage}
+                alt={feature.title}
+                width={20}
+                height={20}
+                className="w-5 h-5 object-contain filter brightness-0 invert"
+              />
+            </div>
+            <h3 className="font-inter font-bold text-[16px] leading-[1.2] uppercase text-black">
+              {feature.title}
+            </h3>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-            WHAT MAKES AOW UNIQUE COMPARED TO OTHERS?
-          </h2>
-          <p className="text-black text-lg max-w-4xl leading-relaxed">
-            We stand out blending with a team of experts working all together. Client-first approach and innovation
-            makes us different from others. So here are a few points below:
+
+          {/* Description */}
+          <p className="text-black font-inter font-medium text-[16px] leading-[1.4]">
+            {feature.description}
           </p>
         </div>
+      ))}
+    </div>
+  </div>
+</section>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {uniqueFeatures.map((feature, index) => (
-            <div
-              key={index}
-              className={`rounded-[24px] p-6 border border-[#006D9F] ${feature.bgColor} transition-all duration-300`}
-            >
-              {/* Icon */}
-              <div className="w-10 h-10 bg-[#084C6B] rounded-full flex items-center justify-center mb-4">
-                <Image
-                  src={feature.iconImage}
-                  alt={feature.title}
-                  width={20}
-                  height={20}
-                  className="w-5 h-5 object-contain filter brightness-0 invert"
-                />
-              </div>
 
-              {/* Title */}
-              <h3 className="text-md font-bold text-black uppercase mb-2 leading-snug">
-                {feature.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-black text-sm leading-relaxed">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
   )
 }

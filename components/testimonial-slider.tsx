@@ -7,7 +7,7 @@ const testimonialSets = [
   [
     {
       quote:
-        "We absolutely loved working with the team! The Skill Koala site turned out even better than we imagined — fun, modern, and super engaging. Huge thanks for bringing our vision to life! The UI is clean, and the UX is intuitive — exactly what we needed for interactive learning.",
+        "We absolutely loved working with the team! The Skill Kwiz site turned out even better than we imagined — fun, modern, and super engaging. Huge thanks for bringing our vision to life! The UI is clean, and the UX is intuitive — exactly what we needed for interactive learning.",
       name: "Alice Rosenberg",
       title: "co-owner",
       logo: "/images/Authorimage.png",
@@ -58,73 +58,137 @@ export default function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === testimonialSets.length - 1 ? 0 : prev + 1))
+    setCurrentSlide((prev) => (prev >= testimonialSets.length - 1 ? 0 : prev + 1))
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? testimonialSets.length - 1 : prev - 1))
+    setCurrentSlide((prev) => (prev <= 0 ? testimonialSets.length - 1 : prev - 1))
   }
 
   const progressPercentage = ((currentSlide + 1) / testimonialSets.length) * 100
 
+  // Defensive: safely access current testimonial set
+  const currentTestimonials = testimonialSets[currentSlide] ?? []
+
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-r from-white via-blue-50 to-blue-100 overflow-hidden">
-      <div className="relative max-w-screen-xl mx-auto px-6 font-nunito">
+    <section
+      className="mx-auto bg-gradient-to-r from-white via-blue-50 to-blue-100 overflow-hidden"
+      style={{
+        width: "1440px",
+        height: "629px",
+        paddingTop: "140px",
+        paddingRight: "8px",
+        paddingBottom: "140px",
+        paddingLeft: "8px",
+      }}
+    >
+      <div className="relative mx-auto px-6 font-nunito h-full flex flex-col">
         {/* Header Container */}
         <div className="mb-12">
-          <p className="text-xs font-bold uppercase text-[#006D9F] tracking-wide">TESTIMONIALS</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-            WHAT OUR <span className="text-gray-900">CLIENTS</span> SAY
+          <p
+            className="uppercase text-[#006D9F]"
+            style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontWeight: 700,
+              fontSize: "16px",
+              lineHeight: "140%",
+              letterSpacing: "0",
+              width: "1344px",
+              height: "22px",
+            }}
+          >
+            TESTIMONIALS
+          </p>
+
+          <h2
+            className="text-gray-900 uppercase"
+            style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontWeight: 700,
+              fontSize: "48px",
+              lineHeight: "140%",
+              letterSpacing: "0",
+              width: "1344px",
+              height: "67px",
+            }}
+          >
+            WHAT OUR <span className="text-[#006D9F]">CLIENTS</span> SAY
           </h2>
         </div>
 
         {/* Testimonials and Arrows Container */}
-        <div className="flex items-start gap-6 mb-12">
+        <div
+          className="flex items-start mb-12 flex-1"
+          style={{
+            width: "1632px",
+            height: "212px",
+            gap: "272px",
+          }}
+        >
           {/* Arrows */}
-          <div className="flex gap-3 mt-2">
-            <button
-              onClick={prevSlide}
-              aria-label="Previous testimonials"
-              className="flex items-center justify-center w-9 h-9 transition"
+         <div
+              className="flex mt-2 pl-4"
+              style={{
+                width: "200px",
+                height: "200px",
+                gap: "24px",
+              }}
             >
-              <Image src="/images/left arrow.png" alt="Previous" width={36} height={36} />
-            </button>
-            <button
-              onClick={nextSlide}
-              aria-label="Next testimonials"
-              className="flex items-center justify-center w-9 h-9 transition"
-            >
-              <Image src="/images/right arrow.png" alt="Next" width={36} height={36} />
-            </button>
-          </div>
+              <button
+                onClick={prevSlide}
+                aria-label="Previous testimonials"
+                className="flex items-center justify-center w-20 h-20 transition" // 80x80px
+              >
+                <Image src="/images/left arrow.png" alt="Previous" width={64} height={64} />
+              </button>
+              <button
+                onClick={nextSlide}
+                aria-label="Next testimonials"
+                className="flex items-center justify-center w-20 h-20 transition"
+              >
+                <Image src="/images/right arrow.png" alt="Next" width={64} height={64} />
+              </button>
+            </div>
+
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-1">
-            {testimonialSets[currentSlide].map((testimonial, index) => (
-              <div key={index} className="flex flex-col justify-between h-full">
-                <p className="text-black text-[16px] leading-relaxed relative">
-                  <span className="text-[#006D9F] text-2xl mr-2 align-top">“</span>
-                  {testimonial.quote}
-                  <span className="text-[#006D9F] text-2xl ml-2 align-bottom">”</span>
-                </p>
-                <div className="mt-6 flex items-center">
-                  <Image
-                    src={testimonial.logo}
-                    alt={testimonial.name}
-                    width={32}
-                    height={32}
-                    className="rounded-full mr-3"
-                  />
-                  <div>
-                    <p className="text-[16px] font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-[16px] text-black">{testimonial.title}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 flex-1">
+  {currentTestimonials.map((testimonial, index) => (
+    <div
+      key={index}
+      className="flex flex-col justify-between p-0"
+      style={{
+        width: "546px",
+        height: "180px",
+        minHeight: "180px",
+        borderRadius: "16px",
+      }}
+    >
+      <p className="text-black text-[16px] font-semibold leading-relaxed relative font-nunito" >
+          <span className="text-[#006D9F] text-2xl mr-2 align-top">“</span>
+          {testimonial.quote}
+          <span className="text-[#006D9F] text-2xl ml-2 align-bottom">”</span>
+        </p>
 
+      <div className="mt-4 flex items-center">
+        <Image
+          src={testimonial.logo}
+          alt={testimonial.name}
+          width={32}
+          height={32}
+          className="rounded-full mr-3"
+        />
+        <div className="flex gap-2 items-center">
+          <p className="text-[16px] font-bold text-gray-900">{testimonial.name}</p>
+          <p className="text-[16px] font-bold text-black">{testimonial.title}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+</div>
         {/* Progress Bar */}
         <div className="w-full max-w-md mx-auto">
           <div className="w-full bg-gray-200 rounded-full h-1">
