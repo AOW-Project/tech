@@ -143,7 +143,7 @@ export default function HomeHero() {
           </div>
 
           {/* Bottom Navigation */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center mt-10">
             <span className="cursor-pointer hover:underline text-base text-[#006D9F] font-inter flex items-center gap-1">
               View service <ArrowUpRight className="w-6 h-6" />
             </span>
