@@ -58,16 +58,16 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
     switch (currentStep) {
       case 1:
         return (
-          <div className="h-[180px] flex flex-col justify-between">
+          <div className="min-h-[220px] flex flex-col justify-between">
             <div className="space-y-2">
               <h2 className="text-[#000000] text-base font-inter font-weight: 500 mb-2">LET'S CREATE SOMETHING EXTRAORDINARY TOGETHER!</h2>
-              <h3 className="mb-4 text-[#084C6B] text-sm font-semibold">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
+              <h3 className="mb-4 text-[#084C6B] text-sm font-bold">YOUR JOURNEY TOWARDS EXCELLENCE STARTS HERE</h3>
               <div>
                 <label htmlFor="service" className="block text-base font-weight: 500 font-inter text-[gray-700] mb-1">Services*</label>
                 <select
                   id="service"
                   name="service"
-                  className="w-full border border-gray-300 rounded-full p-1 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
+                  className="w-full border border-gray-300 rounded-full p-2 text-gray-900 focus:ring-2 focus:ring-[#1b8bf9]"
                   value={serviceIdx}
                   onChange={handleServiceChange}
                   required
@@ -94,8 +94,8 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
         );
       case 2:
         return (
-          <div className="h-[220px] flex flex-col justify-between">
-            <div className="space-y-0.2">
+          <div className="min-h-[220px] flex flex-col justify-between">
+            <div className="space-y-1">
               <h2 className="text-[#1b8bf9] text-sm font-semibold">GOT A VISION OR IDEA? LETS TURN IT INTO REALITY</h2>
               <div>
                 <label htmlFor="projectDescription" className="block text-sm font-semibold text-gray-700 mb-1">
@@ -151,7 +151,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
         );
       case 3:
         return (
-          <div className="h-[220px] flex flex-col justify-between">
+          <div className="min-h-[220px] flex flex-col justify-between">
             <div className="space-y-2">
               <h2 className="text-sm font-semibold text-[#1b8bf9]">LET'S CONNECT!</h2>
               <div className="grid grid-cols-2 gap-3">
@@ -240,7 +240,9 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ isMobile }): JSX.Element 
           ></div>
         ))}
       </div>
-      {renderStep()}
+      <div className="transition-all duration-300 ease-in-out">
+        {renderStep()}
+      </div>
     </form>
   );
 };
