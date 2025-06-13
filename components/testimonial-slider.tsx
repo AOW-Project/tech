@@ -80,6 +80,7 @@ export default function TestimonialsSection() {
         paddingRight: "8px",
         paddingBottom: "140px",
         paddingLeft: "8px",
+        backgroundImage: "url('/images/bg.png')",
       }}
     >
       <div className="relative mx-auto px-6 font-nunito h-full flex flex-col">

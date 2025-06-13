@@ -37,7 +37,7 @@ const Portfolio = () => {
       <section
   id="portfolio"
   className="pt-[140px] pb-[140px] bg-gray-50"
-  style={{ backgroundImage: "url('/images/b.png')" }}
+  style={{ backgroundImage: "url('/images/bg.png')" }}
 >
   <div className="max-w-[1344px] mx-auto px-4 md:px-6">
     {/* Header */}

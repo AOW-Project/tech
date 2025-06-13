@@ -142,11 +142,12 @@ export default function ServiceV1Page() {
 
           {/* Top Content */}
           <div className="flex flex-col gap-[24px] w-full h-[231px] font-nunito">
-            <p className="text-[16px] font-semibold px-3 py-1 w-fit  border-[#006D9F] text-[#084C6B] rounded-full uppercase font-inter">
+            <p className="text-xs font-semibold px-3 py-1 w-fit bg-blue-50 border border-[#006D9F] text-[#084C6B] rounded-full uppercase">
               CUSTOM APP DEVELOPMENT
             </p>
-            <h3 className="text-[40px] font-bold text-black">WHAT YOU GET WITH CUSTOM APP DEVELOPMENT</h3>
-       
+            <h2 className="text-3xl md:text-4xl font-bold text-black leading-snug">
+              WHAT YOU GET WITH CUSTOM APP DEVELOPMENT
+            </h2>
             <div className="grid md:grid-cols-2 gap-6 text-black text-base leading-relaxed">
               <p>
                 In today's fast-paced digital world, a website alone is no longer enough. Mobile applications are becoming essential tools for business growth and customer engagement. We develop custom apps that match your goals and bring real value to your company — no matter the industry.
