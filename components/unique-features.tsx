@@ -55,10 +55,11 @@ export default function UniqueFeatures() {
         EXCEPTIONAL FEATURES
       </div>
 
-      <h2 className="text-[48px] font-extrabold uppercase text-black leading-tight mb-4">
-        WHAT MAKES AOW UNIQUE COMPARED TO OTHERS?
-      </h2>
+      <h1 className="text-[48px] font-extrabold leading-[140%] uppercase text-black font-nunito mb-8">
+              WHAT MAKES AOW UNIQUE COMPARED TO OTHERS?
+       </h1>
 
+      
       <p className="max-w-[774px] text-[16px] font-medium text-black leading-[140%]">
         We stand out blending with a team of experts working all together. Client-first approach and innovation
         makes us different from others. So here are a few points below:

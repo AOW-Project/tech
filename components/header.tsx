@@ -27,12 +27,12 @@ export default function Header() {
                 {/* Column 1: APP DEVELOPMENT */}
                 <div className="flex flex-col space-y-2 pr-4 border-r border-gray-200"> {/* Added border-r for separator */}
                   <h4 className="text-sm font-bold uppercase text-black mb-2">APP DEVELOPMENT</h4>
-                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">Custom App Development</Link>
-                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">E-commerce Apps</Link>
-                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">UI/UX Design</Link>
-                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">Maintenance & Updates</Link>
-                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">Progressive Web Apps (PWAs)</Link>
-                  <Link href="#" className="block text-sm text-gray-700 hover:text-[#00647D]">API Integration</Link>
+                  <Link href="#" className="block text-sm text-black  hover:text-[#00647D]">Custom App Development</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">E-commerce Apps</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">UI/UX Design</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Maintenance & Updates</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">Progressive Web Apps (PWAs)</Link>
+                  <Link href="#" className="block text-sm text-black hover:text-[#00647D]">API Integration</Link>
                 </div>
 
                 {/* Column 2: WEB DEVELOPMENT */}

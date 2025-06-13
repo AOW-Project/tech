@@ -99,7 +99,7 @@ export default function ServiceV1Page() {
       </div>
 
       {/* Bottom Services Section */}
-      <div className="bg-white px-4 md:px-6 py-16 max-w-6xl mx-auto">
+      <div className="bg-white py-24 px-6 max-w-7xl mx-auto">
         <p className="text-[16px] font-semibold text-[#006D9F] uppercase tracking-wide mb-2">
           Innovative Digital Solutions
         </p>

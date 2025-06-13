@@ -85,34 +85,12 @@ export default function TestimonialsSection() {
       <div className="relative mx-auto px-6 font-nunito h-full flex flex-col">
         {/* Header Container */}
         <div className="mb-12">
-          <p
-            className="uppercase text-[#006D9F]"
-            style={{
-              fontFamily: "'Nunito', sans-serif",
-              fontWeight: 700,
-              fontSize: "16px",
-              lineHeight: "140%",
-              letterSpacing: "0",
-              width: "1344px",
-              height: "22px",
-            }}
-          >
-            TESTIMONIALS
-          </p>
+          <div className="text-[#006D9F] text-[16px] font-bold uppercase mb-2">
+           TESTIMONIALS
+          </div>
 
-          <h2
-            className="text-gray-900 uppercase"
-            style={{
-              fontFamily: "'Nunito', sans-serif",
-              fontWeight: 700,
-              fontSize: "48px",
-              lineHeight: "140%",
-              letterSpacing: "0",
-              width: "1344px",
-              height: "67px",
-            }}
-          >
-            WHAT OUR <span className="text-[#006D9F]">CLIENTS</span> SAY
+         <h2 className="font-nunito font-extrabold text-[48px] leading-[140%] tracking-normal uppercase text-black w-[1344px] h-[67px] mb-6">
+            WHAT OUR <span className="text-[#006D9F]">CLIENTS </span>SAY
           </h2>
         </div>
 
@@ -153,7 +131,7 @@ export default function TestimonialsSection() {
 
           {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 flex-1">
-  {currentTestimonials.map((testimonial, index) => (
+            {currentTestimonials.map((testimonial, index) => (
     <div
       key={index}
       className="flex flex-col justify-between p-0"

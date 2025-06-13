@@ -461,67 +461,64 @@ export default function ServiceV1Page() {
             </div>
             </div>
         </div>
-        </section>
-      {/* FAQ Section */}
-       <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-sm font-medium text-blue-600 mb-2">FAQ</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              GOT QUESTIONS? WE'VE GOT <span className="text-blue-600">ANSWERS</span>
-            </h2>
-          </div>
+       </section>
 
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900 pr-4">HOW LONG DOES IT TAKE TO BUILD A CUSTOM APP?</p>
-                <span className="text-gray-400 text-xl">+</span>
-              </div>
-            </div>
+        {/*faq section*/}
 
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900 pr-4">
-                  DO YOU OFFER SUPPORT AFTER THE APP IS LAUNCHED?
-                </p>
-                <span className="text-gray-400 text-xl">+</span>
-              </div>
-            </div>
+<div className="flex items-center justify-center w-full overflow-x-auto">
+  <section className="flex items-center justify-center" style={{ 
+    width: '1920px', 
+    height: '566px', 
+    padding: '140px 4px', 
+    gap: '8px', 
+    backgroundImage: 'url("https://example.com/your-background-image.jpg")', 
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center' 
+  }}>
+    <div className="flex flex-col items-center justify-center" style={{ width: '1076px', height: '286px', gap: '24px' }}>
+      {/* Heading Section */}
+      <div className="text-center">
+        <p className="font-nunito font-extrabold text-[16px] leading-[140%] tracking-normal uppercase text-blue-600 mb-2 w-[1076px] h-[22px]">FAQ</p>
+        <h2 className="font-nunito font-extrabold text-[48px] leading-[140%] tracking-normal uppercase text-gray-900 w-[1076px] h-[67px]">
+          GOT QUESTIONS? WE'VE GOT <span className="text-blue-600">ANSWERS</span>
+        </h2>
+      </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900 pr-4">HOW MUCH DOES CUSTOM APP DEVELOPMENT COST?</p>
-                <span className="text-gray-400 text-xl">+</span>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900 pr-4">WILL I OWN THE SOURCE CODE?</p>
-                <span className="text-gray-400 text-xl">+</span>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900 pr-4">
-                  CAN YOU WORK WITH MY EXISTING SYSTEM OR SOFTWARE?
-                </p>
-                <span className="text-gray-400 text-xl">+</span>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-gray-900 pr-4">CAN YOU HELP WITH DESIGN AND UX TOO?</p>
-                <span className="text-gray-400 text-xl">+</span>
-              </div>
-            </div>
-          </div>
+      {/* Grid Section for FAQ Items */}
+      <div className="grid md:grid-cols-2 gap-5 w-[1076px] h-[168px]">
+        <div className="flex justify-between items-center w-[528px] h-[56px] gap-6 pt-4 pb-4 pl-4 pr-4 border-b" style={{ borderColor: '#A7BDCB' }}>
+          <p className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-gray-900 text-left">HOW LONG DOES IT TAKE TO BUILD A CUSTOM APP?</p>
+          <span className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-white flex items-center justify-center relative w-[18px] h-[18px]" style={{ top: '3px', left: '3px', backgroundColor: '#084C6B' }}>+</span>
         </div>
-      </section>
 
+        <div className="flex justify-between items-center w-[528px] h-[56px] gap-6 pt-4 pb-4 pl-4 pr-4 border-b" style={{ borderColor: '#A7BDCB' }}>
+          <p className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-gray-900 text-left">DO YOU OFFER SUPPORT AFTER THE APP IS LAUNCHED?</p>
+          <span className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-white flex items-center justify-center relative w-[18px] h-[18px]" style={{ top: '3px', left: '3px', backgroundColor: '#084C6B' }}>+</span>
+        </div>
+
+        <div className="flex justify-between items-center w-[528px] h-[56px] gap-6 pt-4 pb-4 pl-4 pr-4 border-b" style={{ borderColor: '#A7BDCB' }}>
+          <p className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-gray-900 text-left">HOW MUCH DOES CUSTOM APP DEVELOPMENT COST?</p>
+          <span className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-white flex items-center justify-center relative w-[18px] h-[18px]" style={{ top: '3px', left: '3px', backgroundColor: '#084C6B' }}>+</span>
+        </div>
+
+        <div className="flex justify-between items-center w-[528px] h-[56px] gap-6 pt-4 pb-4 pl-4 pr-4 border-b" style={{ borderColor: '#A7BDCB' }}>
+          <p className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-gray-900 text-left">WILL I OWN THE SOURCE CODE?</p>
+          <span className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-white flex items-center justify-center relative w-[18px] h-[18px]" style={{ top: '3px', left: '3px', backgroundColor: '#084C6B' }}>+</span>
+        </div>
+
+        <div className="flex justify-between items-center w-[528px] h-[56px] gap-6 pt-4 pb-4 pl-4 pr-4 border-b" style={{ borderColor: '#A7BDCB' }}>
+          <p className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-gray-900 text-left">CAN YOU WORK WITH MY EXISTING SYSTEM OR SOFTWARE?</p>
+          <span className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-white flex items-center justify-center relative w-[18px] h-[18px]" style={{ top: '3px', left: '3px', backgroundColor: '#084C6B' }}>+</span>
+        </div>
+
+        <div className="flex justify-between items-center w-[528px] h-[56px] gap-6 pt-4 pb-4 pl-4 pr-4 border-b" style={{ borderColor: '#A7BDCB' }}>
+          <p className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-gray-900 text-left">CAN YOU HELP WITH DESIGN AND UX TOO?</p>
+          <span className="font-inter font-bold text-[16px] leading-[120%] tracking-normal uppercase text-white flex items-center justify-center relative w-[18px] h-[18px]" style={{ top: '3px', left: '3px', backgroundColor: '#084C6B' }}>+</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
       {/* Contact Section */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
